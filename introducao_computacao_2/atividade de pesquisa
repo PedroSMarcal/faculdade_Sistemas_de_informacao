@@ -1,0 +1,43 @@
+1. Problemas no Mariner (1962)
+Custo: 18,5 milhões dólares
+
+Desastre: Mariner, um foguete com uma sonda espacial para Vênus, foi desviado de seu percurso de voo logo após o lançamento. O controle da missão destruiu o foguete 293 segundos após a decolagem.
+
+Causa: Um programador, ao passar para o computador uma fórmula que haviam lhe entregado escrita manualmente, se esqueceu de uma barra. Sem ela, o software tratava variações normais de velocidade como se fossem sérios problemas, causando falhas por tentativas de correções que acabaram por enviar o foguete fora do curso.
+A investigação do acidente determinou que o problema estava numa fórmula escrita a lápis que depois foi "inadequadamente" digitada no computador de cálculo, o que fez que o foguete calculasse mal a trajetória que devia seguir.
+
+2. Milhares de Webcams se tornaram publicas por erro de Software.
+
+    O conteúdo filmado pelos proprietários das webcams TRENDnet foi transmitido publicamente sem precisar de qualquer autentificação por senha. Como resultado varias câmeras tiveram seu conteúdo espalhados na rede. Estima-se que no máximo 50 mil dispositivos sofreram com a brecha deixada pela empresa. Para que a situação seja corrigida é preciso uma atualização no firmware. Acredita-se que a falha começou a partir de uma outra atualização em 2010. 
+
+3.Divisão de números com ponto flutuante no Pentium (1993)
+
+Um problema com os microprocesadores provocou uma falha na divisão de números com ponto flutuante. Por exemplo, ao dividir 4195835,0 por 3145727,0 o resultado apresentado pelo microprocesador era 1,33374 ao invés de 1,33382, um erro de 0.006%. Ainda que a falha afetava a poucos usuários, resultou todo um problema para a Intel, que viu-se obrigada a trocar entre três e cinco milhões de chips, numa operação que lhe custou mais de meio bilhão de dólares
+
+4.O Ping da Morte (1995/1996)
+
+Devido a um problema que afetava o código que maneja o protocolo IP, era possível "capturar" um computador com Windows lhe enviando um ping corrupto. O problema afetava vários sistemas operacionais mas o pior caso era, lógico, com o Windows, que travava e mostrava a famosa "tela azul".
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+A diferença de um software livre para um open source é:
+- O software livre lhe da acesso para modificação do codigo fonte, restringindo a algumas restriçoões apenas já o open source possui um dono unico que é o único que faz tal alteração
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+GNU - GPL = Termo de licensa utilizado por softwares GPU ou derivados podendo ser encontrado em:
+https://www.gnu.org/licenses/licenses.pt-br.html
+A Licença de Documentação Livre GNU (GNU Free Documentation License) é uma forma de copyleft criada para uso em manuais, livros ou outros documentos para garantir que qualquer um tem a real liberdade de copiar e redistribui-los, com ou sem modificações, tanto comercial quanto não comercialmente. A versão mais recente é versão 1.3
+tem como principal motivo software livres 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+EULA - limitar a redistribuição e as modificações no sistema
+Software proprietário - Quando a licença é do tipo de software proprietário, qualquer cópia, redistribuição ou alteração é proibida
+Software livre - Oposto ao modelo anterior, esse tipo de software refere-se ao programa que pode ser usado, copiado, alterado e repassado sem restrições pelos usuários.
+Software comercial - Esse tipo de licença de software é desenvolvida com fins lucrativo
+Open Source - Código aberto
+GNU General Public License (GNU GPL) - modelo de licenciamento de código aberto, assegurando ao usuário o direito de rodar o sistema em suas máquinas, estudar e modificar o código-fonte e redistribuir o programa.
+Software gratuito - freeware,não exige o pagamento de licenças. O utilizador, ainda assim, deve aceitar um contrato, em que podem ser impostas limitações, como restrições do ambiente de uso.
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+O sotware tem como um impacto na troca de informações, e logo tranformou o mundo globalizado, tudo gira em torno de softwares seja lazer ou trabalho, o impacto dele veio tanto para bem quanto para os males;
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Software livre não soluciona a pirataria 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
