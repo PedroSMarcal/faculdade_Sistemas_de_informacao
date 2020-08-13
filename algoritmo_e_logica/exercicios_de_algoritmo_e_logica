@@ -73,3 +73,73 @@ Inicio
    fimpara
    
 Fimalgoritmo
+             =    =   =  =  =  =  =  =  =  =  =  =  =   =  =   = =  =  = =  = = = = == = =
+Algoritmo "Aula_dia_12-08-2020 ex2"
+
+Var
+   Mat: vetor[1..3, 1..3] de inteiro
+   Result, x, y: inteiro
+Inicio
+   Result <- 0
+   Escreval("Somaremos os valores de uma matriz 3x3")
+   Escreval("Insira os valores")
+   Para x de 1 ate 3 faca
+      Para y de 1 ate 3 faca
+         Leia (Mat[x, y])
+      fimpara
+   fimpara
+   
+   Para x de 1 ate 3 faca
+      Para y de 1 ate 3 faca
+         result <- result + Mat[x, y]
+      fimpara
+   fimpara
+
+   Para x de 1 ate 3 faca
+      Para y de 1 ate 3 faca
+         Escreva(, Mat[x, y]:5, " ")
+      fimpara
+      Escreval(" ")
+   fimpara
+
+   Escreval("O resultado é de ", result)
+Fimalgoritmo
+
+ = = = == = = = == = == = = ==  = == = == = = == = = = = == = == = = == = = = =
+Algoritmo "Aula_dia_12-08-2020_ex3"
+
+Var
+   Mat1: vetor[1..3, 1..3] de inteiro
+   Mat2: vetor[1..3, 1..3] de inteiro
+   Mat3: vetor[1..3, 1..3] de inteiro
+   i, j: inteiro
+
+Inicio
+   Escreval("Informe-nos os valores da primeira matriz")
+   Para i de 1 ate 3 faca
+      Para j de 1 ate 3 faca
+         Leia (Mat1[i, j])
+      fimpara
+   fimpara
+   
+   Escreval("Informe-nos os valores da segunda matriz")
+   Para i de 1 ate 3 faca
+      Para j de 1 ate 3 faca
+         Leia (Mat2[i, j])
+      fimpara
+   fimpara
+
+   Para i de 1 ate 3 faca
+      Para j de 1 ate 3 faca
+         Mat3[i, j] <- ((Mat1[i, j]) + (Mat2[i, j]))
+      Fimpara
+   Fimpara
+   
+   Para i de 1 ate 3 faca
+      Para j de 1 ate 3 faca
+         Escreva(Mat3[i, j])
+      Fimpara
+      Escreval(" ")
+   Fimpara
+   
+Fimalgoritmo
