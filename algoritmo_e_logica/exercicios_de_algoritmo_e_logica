@@ -1,2 +1,75 @@
 ---------------------TODOS OS EXERCICIOS FORAM FEITOS EM VISUALG--------------------------
-r
+Algoritmo "aula 07-08 exe1"
+
+Var
+  n, s, divisor: inteiro
+  result: real
+
+Inicio
+   divisor <- 1003
+   s <- 0
+   Escreval("Informe nos até qual número da sequência")
+   Leia(n)
+   enquanto (s <> n) faca
+      divisor <- divisor - 3
+      s <- s + 1
+      se (s % 2 <> 0) entao
+         result <- result - (divisor / s)
+         senao
+            result <- result + (divisor / s)
+      fimse
+   fimenquanto
+   Escreval (-result)
+
+Fimalgoritmo
+-----------------                  ------------------------                ------------
+Algoritmo "aula 07-08 exe2"
+
+Var
+   cont1:inteiro
+   l1, l2, area, perim:real
+
+Inicio
+   cont1 <- 0
+   Escreval("Digite um valor inválido para parar")
+   Escreval("Indique o primeiro lado")
+   Leia(l1)
+   Escreval("Indique o segundo lado")
+   Leia(l2)
+   enquanto (l1 > 0) e (l2 > 0) faca
+      area <- l1 * l2
+      Escreval("A aréa é de: ", area)
+      perim <- ((l1 * 2) + (l2 * 2))
+      Escreval("O perimetro é de: ", perim)
+      cont1 <- cont1 + 1
+      Escreval("Indique o primeiro lado")
+      Leia(l1)
+      Escreval("Indique o segundo lado")
+      Leia(l2)
+   fimenquanto
+      Escreval("A quantidade de retangulos são: ", cont1)
+
+Fimalgoritmo
+--------------------                ---------------------               --------------------
+<!------------------ Primeira aula de Matriz -----------------------!>
+Algoritmo "aula_dia_10-08-2020"
+
+Var
+   Mat: vetor [1..3, 1..3] de inteiro
+   Lin, Col: inteiro
+Inicio
+   escreval("Leitura de Matriz")
+   para Lin de 1 ate 3 faca
+      para Col de 1 ate 3 faca
+         leia (Mat[Lin, Col])
+      fimpara
+   fimpara
+   
+   para Lin de 1 ate 3 faca
+      para Col de 1 ate 3 faca
+         Escreva(Mat[Lin, Col]:5, " ")
+      fimpara
+      escreval(" ")
+   fimpara
+   
+Fimalgoritmo
