@@ -38,3 +38,20 @@ function calculo2 (){
     return resultado
 }
 exe2()
+/*=-=-=-=-=-=-=-=-=--=-=- exe3 -=-=-=-=--=-=-=-=--=-=-=-=-*/
+function  exe3 (){
+
+}
+/*=-=-=-=-=-=-=-=-=--=-=- exe4 -=-=-=-=--=-=-=-=--=-=-=-=-*/
+function  exe4 (){
+
+}
+/*=-=-=-=-=-=-=-=-=--=-=- exe4 -=-=-=-=--=-=-=-=--=-=-=-=-*/
+function  exe5 (){
+    entrada5()
+    verificacao5()
+}
+function entrada5 (){
+    var numero = Number(prompt(`Insira seu valor e diremos se é negativo ou positivo`))
+
+}
