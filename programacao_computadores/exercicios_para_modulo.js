@@ -9,20 +9,20 @@ function exe1(n){
 }
 
 function principal (){
-    var numero = Number(prompt(`Indique um número`))
+    var numero 
     var restultado = exe1 (numero)
     console.log(`A soma dos números é ${restultado}`)
 } 
 
 principal()
 /* exe2 */
-function exe2 (){
+function exe2 (numero){
     entrada2()
     calculo2() 
     console.log(`Em segundos seu valor fica ${resultado}`)
 }
 
-function entrada2 (){
+function entrada2 (numero){
     console.log(`Por favor entre com 3 números Inteiros`)
     var h = Number(prompt(`Insira o primeiro valor Inteiro`))
     var m = Number(prompt(`Insira o segundo número`))
@@ -30,5 +30,5 @@ function entrada2 (){
 }
 
 function calculo2 (){
-    
+
 }
