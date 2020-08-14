@@ -27,8 +27,12 @@ function entrada2 (numero){
     var h = Number(prompt(`Insira o primeiro valor Inteiro`))
     var m = Number(prompt(`Insira o segundo número`))
     var s = Number(prompt(`Insira o terceiro valor`))
+    
 }
 
 function calculo2 (){
+    var m = (h * 60) + m /* horas para minutos + minutos */
+    var s = (m * 60) + s /* minutos para segundos */ 
 
+    return resultado
 }
