@@ -31,9 +31,9 @@ function entrada2 (){
     return h, m, s
 }
 
-function calculo2 (h, m, s){
-    m = (h * 60) + m /* horas para minutos + minutos */
-    resultado = (m * 60) + s /* minutos para segundos */ 
+function calculo2 (){
+    mh = (h * 60) + m /* horas para minutos + minutos */
+    resultado = (mh * 60) + s /* minutos para segundos */ 
 
     return resultado
 }
