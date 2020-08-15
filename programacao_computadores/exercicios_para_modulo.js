@@ -101,4 +101,23 @@ function verificacao5 (numero){
     }
 }
 exe5 ()
-/*=-=-=-=-=-=-=-=-=--=-=- exe5 -=-=-=-=--=-=-=-=--=-=-=-=-*/
+/*=-=-=-=-=-=-=-=-=--=-=- exe6 -=-=-=-=--=-=-=-=--=-=-=-=-*/
+function exe6 (){
+    entrada6()
+    console.log(calculo6(sexo, alt))
+}
+function entrada6 (){
+    sexo = prompt(`Indique seu sexo M(masculino) - F(Feminino) `)
+    alt = Number(prompt(`Indique nos sua altura`))
+
+    return sexo, alt
+}
+function calculo6 (sexo, alt){
+    switch (sexo) {
+        case "M": return (alt * 72.2) - 58
+        case "F": return (alt * 62.1) - 44.7
+
+        default: return "insira um sexo válido" 
+    }
+}
+exe6()
