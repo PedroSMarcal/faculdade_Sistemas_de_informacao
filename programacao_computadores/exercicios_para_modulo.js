@@ -62,14 +62,43 @@ exe3 ()
 /*=-=-=-=-=-=-=-=-=--=-=- exe4 -=-=-=-=--=-=-=-=--=-=-=-=-*/
 function  exe4 (){
     entrada4()
-    calculo4()
+    calculo4(raio)
+
+    console.log(resultado)
 }
+function entrada4(){
+    raio = prompt(`Informe-nos o raio da cicunferencia`)
+
+    return raio
+}
+
+function calculo4(){
+    resultado = (3/4) * raio
+
+    return resultado
+}
+
+exe4 ()
 /*=-=-=-=-=-=-=-=-=--=-=- exe4 -=-=-=-=--=-=-=-=--=-=-=-=-*/
 function  exe5 (){
     entrada5()
-    verificacao5()
-}
-function entrada5 (){
-    var numero = Number(prompt(`Insira seu valor e diremos se é negativo ou positivo`))
+    console.log(verificacao5(numero))
 
 }
+function entrada5 (){
+    numero = Number(prompt(`Insira seu valor e diremos se é negativo ou positivo`))
+
+    return numero
+}
+
+function verificacao5 (numero){
+    if (numero > 0) {
+        return "positivo"
+    } if (numero < 0) {
+        return "negativo"
+    } else {
+        return "zero"
+    }
+}
+exe5 ()
+/*=-=-=-=-=-=-=-=-=--=-=- exe5 -=-=-=-=--=-=-=-=--=-=-=-=-*/

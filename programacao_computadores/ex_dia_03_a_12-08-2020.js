@@ -48,15 +48,16 @@ for (var i = Number(0); i < byke.lenght; i++){
 console.log(`a soma dos aros é ${soma}`)    
 }
 // aula dia 04-08-2020
-function principal(){
-    var n1 = Number(prompt(`Informe o primeiro número`))
-    var n2 = Number(prompt(`Informe o segundo número`))
-    var result = soma(n1 , n2)
-    console.log(resp)
-}
-function soma(){
-    return x + y
-}
+    function principal(){
+        var n1 = Number(prompt(`Informe o primeiro número`))
+        var n2 = Number(prompt(`Informe o segundo número`))
+        var resp = soma(n1 , n2)
+        console.log(resp)
+    }
+    function soma(){
+        return n1 + n2
+    }
+    principal()
 // aula dia 10-08-2020
 function principal() {
     // entrada de dados 
@@ -67,7 +68,7 @@ function principal() {
 
     if ((n1 != "") || (n2 != "")){
     var resultado = calculadora(n1, n2, operador)
-    console.log(`O resultado da operação é ${resultado}`)}
+        console.log(`O resultado da operação é ${resultado}`)}
     else {
         console.log("Insira algum valor")
     }
