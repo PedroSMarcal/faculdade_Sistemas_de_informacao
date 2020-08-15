@@ -121,3 +121,27 @@ function calculo6 (sexo, alt){
     }
 }
 exe6()
+/*=-=-=-=-=-=-=-=-=--=-=- exe7 -=-=-=-=--=-=-=-=--=-=-=-=-*/
+function exe7 (){
+    var vetor = []
+    entrada7(vetor)
+    calculo7(vetor)
+    console.log(media)
+}
+function entrada7 (vet){
+    var i = Number(0)
+    do {
+        vet[i].push(Number(prompt(`Insira o valor desejado`)))
+        i++
+    }
+    while (vet[i] < 0 )
+}
+    media = 0
+function calculo7 (vet){
+    media = 0
+    for (var i = Number(0); i <= vet.length; i++){
+        media = vet[i] + media
+    }
+    media = media / vet.length
+}
+exe7()
