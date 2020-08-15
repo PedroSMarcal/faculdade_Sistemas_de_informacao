@@ -40,7 +40,13 @@ function calculo2 (){
 exe2()
 /*=-=-=-=-=-=-=-=-=--=-=- exe3 -=-=-=-=--=-=-=-=--=-=-=-=-*/
 function  exe3 (){
-
+    entrada3()
+    verificacao3()
+}
+function entrada3(){
+    
+    
+    return
 }
 /*=-=-=-=-=-=-=-=-=--=-=- exe4 -=-=-=-=--=-=-=-=--=-=-=-=-*/
 function  exe4 (){
