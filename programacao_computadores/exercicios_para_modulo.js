@@ -41,16 +41,28 @@ exe2()
 /*=-=-=-=-=-=-=-=-=--=-=- exe3 -=-=-=-=--=-=-=-=--=-=-=-=-*/
 function  exe3 (){
     entrada3()
-    verificacao3()
+    verificacao3(carac1, carac2)
+    console.log(verificacao3())
 }
 function entrada3(){
-    
-    
-    return
+    carac1 = prompt(`Insira a primeira cadeia de caracter`)
+    carac2 = prompt(`insira sua segunda cadeia de caracter`)
+
+    return carac1, carac2
 }
+
+function verificacao3(carac1, carac2){
+    if (carac1 != carac2) {
+        return  (carac1 != caract2).lenght
+    } else {
+        return 0   
+    }
+}
+exe3 ()
 /*=-=-=-=-=-=-=-=-=--=-=- exe4 -=-=-=-=--=-=-=-=--=-=-=-=-*/
 function  exe4 (){
-
+    entrada4()
+    calculo4()
 }
 /*=-=-=-=-=-=-=-=-=--=-=- exe4 -=-=-=-=--=-=-=-=--=-=-=-=-*/
 function  exe5 (){
