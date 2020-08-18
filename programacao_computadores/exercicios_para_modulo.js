@@ -39,26 +39,24 @@ function calculo2 (){
 }
 exe2()
 /*=-=-=-=-=-=-=-=-=--=-=- exe3 -=-=-=-=--=-=-=-=--=-=-=-=-*/
-function  exe3 (){
-    entrada3()
-    verificacao3(carac1, carac2)
-    console.log(verificacao3())
-}
-function entrada3(){
-    carac1 = prompt(`Insira a primeira cadeia de caracter`)
-    carac2 = prompt(`insira sua segunda cadeia de caracter`)
-
-    return carac1, carac2
-}
-
-function verificacao3(carac1, carac2){
-    if (carac1 != carac2) {
-        return  (carac1 != caract2).lenght
+function  exe3 (cadeia1, cadeia2){
+    if (cadeia1 == cadeia2){
+        return 0
     } else {
-        return 0   
+        for (var i = Number(0); i < cadeia1.length; i++){
+            if (cadeia1[i] != cadeia2[i]){
+                return i + 1
+            }
+        }
     }
 }
-exe3 ()
+function chefe3() {
+    var cad1 = prompt(`Informe a cadeia 1`)
+    var cad2 = prompt(`Informe a cadeia 2`)
+    exe3()
+    var resultado = exe3(cad1, cad2)
+    console.log(`O resultado é ${resultado}`)
+}
 /*=-=-=-=-=-=-=-=-=--=-=- exe4 -=-=-=-=--=-=-=-=--=-=-=-=-*/
 function  exe4 (){
     entrada4()
@@ -149,9 +147,10 @@ function calculo7 (vet){
 exe7()
 
 /*=-=-=-=-=-=-=-=-=--=-=- exe8 -=-=-=-=--=-=-=-=--=-=-=-=-*/
-function exe7 (){
+function exe8 (){
     entrada8()
     calculo8(num)
+    console.log(`${fatorial}`)
 }
 function entrada8 (){
     num = Number(prompt(`Insira seu valor`))
@@ -159,5 +158,10 @@ function entrada8 (){
     return num
 }
 function calculo8(num){
-    
+    fatorial = Number(0)
+    for (var i = Number(0); i <= num; i++){
+        fatorial = (i * (i - 1)) + fatorial
+    }
+    return fatorial
 }
+exe8 ()
