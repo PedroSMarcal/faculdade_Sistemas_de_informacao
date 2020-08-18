@@ -122,6 +122,7 @@ function calculo6 (sexo, alt){
 }
 exe6()
 /*=-=-=-=-=-=-=-=-=--=-=- exe7 -=-=-=-=--=-=-=-=--=-=-=-=-*/
+/*------------------------Repassar-------------------*/
 function exe7 (){
     var vetor = []
     entrada7(vetor)
@@ -134,9 +135,10 @@ function entrada7 (vet){
         vet[i].push(Number(prompt(`Insira o valor desejado`)))
         i++
     }
-    while (vet[i] < 0 )
+    while (vet < 0)
 }
     media = 0
+
 function calculo7 (vet){
     media = 0
     for (var i = Number(0); i <= vet.length; i++){
@@ -145,3 +147,5 @@ function calculo7 (vet){
     media = media / vet.length
 }
 exe7()
+
+/*=-=-=-=-=-=-=-=-=--=-=- exe8 -=-=-=-=--=-=-=-=--=-=-=-=-*/
