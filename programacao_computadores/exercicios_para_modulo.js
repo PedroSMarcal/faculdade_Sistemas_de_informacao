@@ -149,3 +149,15 @@ function calculo7 (vet){
 exe7()
 
 /*=-=-=-=-=-=-=-=-=--=-=- exe8 -=-=-=-=--=-=-=-=--=-=-=-=-*/
+function exe7 (){
+    entrada8()
+    calculo8(num)
+}
+function entrada8 (){
+    num = Number(prompt(`Insira seu valor`))
+
+    return num
+}
+function calculo8(num){
+    
+}
