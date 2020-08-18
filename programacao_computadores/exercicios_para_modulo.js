@@ -43,10 +43,14 @@ function  exe3 (cadeia1, cadeia2){
     if (cadeia1 == cadeia2){
         return 0
     } else {
+        if (cadeia2.length > cadeia1.length){
+            return cadeia1.length
+        } else {
         for (var i = Number(0); i < cadeia1.length; i++){
             if (cadeia1[i] != cadeia2[i]){
                 return i + 1
             }
+        }
         }
     }
 }
@@ -159,8 +163,10 @@ function entrada8 (){
 }
 function calculo8(num){
     fatorial = Number(0)
-    for (var i = Number(0); i <= num; i++){
-        fatorial = (i * (i - 1)) + fatorial
+    cont1 = num -1
+    for (var i = Number(1); i <= num; i++){
+        fatorial = (i * (i - cont1)) + fatorial
+        cont1 = cont1 -1
     }
     return fatorial
 }
