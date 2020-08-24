@@ -159,7 +159,7 @@ function entrada8 (){
 }
 function calculo8(num){
     fatorial = Number(0)
-    cont1 = num -1
+    cont1 = num - 1
     for (var i = Number(1); i <= num; i++){
         fatorial = (i * (i - cont1)) + fatorial
         cont1 = cont1 -1
@@ -170,13 +170,18 @@ exe8 ()
 /*=-=-=-=-=-=-=-=-=--=-=- exe9 -=-=-=-=--=-=-=-=--=-=-=-=-*/
 function exe9(){
     entrada9()
-    
+    calculo9(param)
 }
 function entrada9(){
-
+    param = prompt(`indique o valor parametro`)
 }
-function calculo9(){
-
+function calculo9(param){
+    resultado9 = Number(0)
+    for (var i = Number(0); i <= param; i++){
+            if (param % i == 0){
+                resultado9 = i + resultado9
+            }
+    }
 }
 
 /*=-=-=-=-=-=-=-=-=--=-=- exe13 -=-=-=-=--=-=-=-=--=-=-=-=-*/
