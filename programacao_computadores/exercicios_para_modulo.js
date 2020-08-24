@@ -5,7 +5,6 @@ function exe1(n){
     for (var i = Number(0); i <= n; i++){
         soma = soma + 1
     }
-    return soma
 }
 
 function principal (){
@@ -19,7 +18,6 @@ principal()
 function exe2 (){
     entrada2()
     calculo2(s, m, h) 
-    console.log(`Em segundos seu valor fica ${resultado}`)
 }
 
 function entrada2 (){
@@ -28,14 +26,14 @@ function entrada2 (){
     m = Number(prompt(`Insira o segundo número`))
     s = Number(prompt(`Insira o terceiro valor`))
      
-    return h, m, s
+    h, m, s
 }
 
 function calculo2 (){
     mh = (h * 60) + m /* horas para minutos + minutos */
     resultado = (mh * 60) + s /* minutos para segundos */ 
 
-    return resultado
+    return console.log(resultado)
 }
 exe2()
 /*=-=-=-=-=-=-=-=-=--=-=- exe3 -=-=-=-=--=-=-=-=--=-=-=-=-*/
@@ -71,13 +69,13 @@ function  exe4 (){
 function entrada4(){
     raio = prompt(`Informe-nos o raio da cicunferencia`)
 
-    return raio
+    
 }
 
 function calculo4(){
     resultado = (3/4) * raio
 
-    return resultado
+    return console.log(resultado)
 }
 
 exe4 ()
@@ -112,7 +110,7 @@ function entrada6 (){
     sexo = prompt(`Indique seu sexo M(masculino) - F(Feminino) `)
     alt = Number(prompt(`Indique nos sua altura`))
 
-    return sexo, alt
+    sexo, alt
 }
 function calculo6 (sexo, alt){
     switch (sexo) {
@@ -158,7 +156,6 @@ function exe8 (){
 function entrada8 (){
     num = Number(prompt(`Insira seu valor`))
 
-    return num
 }
 function calculo8(num){
     fatorial = Number(0)
@@ -167,7 +164,7 @@ function calculo8(num){
         fatorial = (i * (i - cont1)) + fatorial
         cont1 = cont1 -1
     }
-    return fatorial
+    fatorial
 }
 exe8 ()
 /*=-=-=-=-=-=-=-=-=--=-=- exe9 -=-=-=-=--=-=-=-=--=-=-=-=-*/
@@ -176,6 +173,9 @@ function exe9(){
     
 }
 function entrada9(){
+
+}
+function calculo9(){
 
 }
 
