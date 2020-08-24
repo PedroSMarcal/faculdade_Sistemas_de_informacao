@@ -182,6 +182,7 @@ function calculo9(param){
                 resultado9 = i + resultado9
             }
     }
+    return console.log(`${resultado}`)
 }
 
 /*=-=-=-=-=-=-=-=-=--=-=- exe13 -=-=-=-=--=-=-=-=--=-=-=-=-*/
@@ -234,7 +235,7 @@ function mediaSalario(vet){
 
     console.log(`A media salarial ${somasalario / vet.length}`)
 
-function Idades (vet){
+function Idades(vet){
     var maiorIdade = vet[0].idade
     var menorIdade = vet[0].idade
     console.log(`Entrou na função menor maior idade`)
@@ -255,5 +256,14 @@ function Idades (vet){
 }
 
 function qtndMulheres (vet) {
-    console.log(`Quantidade de mulheres`)
+    mulheres = Number(0)
+    for (var i = Number(0); i <= vet.length; i++){
+        if ((vet[i].sexo == "F") && (vet[i].sexo == "f")){
+            if ((vet[i].filhos == 3) && (vet[i].salario <= 500,00)){
+                mulheres = mulheres + 1
+            }
+        }
+    }
+    return console.log(`A quantidade de mulheres que recebe até 500,00 R$ e tem 3 filhos são ${mulheres}`)  
 }
+exe13()
