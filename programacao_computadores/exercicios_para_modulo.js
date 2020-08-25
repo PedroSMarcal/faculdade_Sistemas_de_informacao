@@ -200,6 +200,16 @@ function calculo9(param){
     }
     return console.log(`${resultado}`)
 }
+-
+/*--------------------------------------------------------------*/
+function exe9 (numero){
+    for (var i = Number(0); i >= 1; i--){
+        if (numero % i == 0){
+            soma = soma + i
+        }
+    }
+    console.log(`Soma dos divisores é ${soma}`)
+} 
 
 /*=-=-=-=-=-=-=-=-=--=-=- exe13 -=-=-=-=--=-=-=-=--=-=-=-=-*/
 exe13()
