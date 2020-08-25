@@ -146,6 +146,22 @@ function calculo7 (vet){
     return (console.log(`A média de todos os valores é de ${media}`))
 }
 exe7()
+/*---------------------------------------------------------------*/
+function exe7 (){
+    var soma = 0 
+    var conta = 0
+    var numero = Number(prompt(`Insira um numero`))
+}
+    do {
+        conta++
+        soma = soma + numero
+        numero = prompt(`Insira um valor negativo se desjar parar`)
+    }while (numero < 0)
+
+function chefe7 (){
+    exe7()
+}
+
 
 /*=-=-=-=-=-=-=-=-=--=-=- exe8 -=-=-=-=--=-=-=-=--=-=-=-=-*/
 function exe8 (){
@@ -164,7 +180,7 @@ function calculo8(num){
         fatorial = (i * (i - cont1)) + fatorial
         cont1 = cont1 -1
     }
-    fatorial
+    
 }
 exe8 ()
 /*=-=-=-=-=-=-=-=-=--=-=- exe9 -=-=-=-=--=-=-=-=--=-=-=-=-*/
