@@ -17,9 +17,15 @@ function exe1(){
             case 4: consultaVendaVendedor(vendas)
                 break
             case 5: MaiiorVendaMes(vendas)
-                break            
+                break 
+            case 6: mesMaiorVenda (vendas)
+                break           
+            case 7: console.log(`Finalizado o programa`)
+                break
+            default: console.log(`Insira um valor válido`)
+                break
         }
-    } while (op != 6)
+    } while (op != 7)
 }
 
 function cadastraVendedor (vendor){
@@ -101,4 +107,11 @@ function MaiiorVendaMes (vend){
         }
     }
     console.log(`A maior venda é de ${maiorVenda} feita pelo vendedor ${codigo}`)
+}
+function mesMaiorVenda (vendas){
+    let mesVendas
+    
+    for (var i = Number(0); i < vend.length; i++ ){
+        
+    }
 }
