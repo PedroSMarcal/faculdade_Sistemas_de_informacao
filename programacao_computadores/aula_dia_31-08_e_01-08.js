@@ -5,7 +5,7 @@ function exe1(){
     let vendas = [] //alteramos a var por let por conta do escopo local e não global
     let vendedores = [] //alteramos a var por let por conta do escopo local e não global
     do {
-        var op = Number(prompt(`[1] Cadastrar vendedor /n [2] Cadastrar venda /n [3] Consulta de Vendas no mês /n [4] Cosulta de Vendas de um Funcionarios /n [5] Vendedor com maior venda no mês /n [6] sair`))
+        var op = Number(prompt(`[1] Cadastrar vendedor /n [2] Cadastrar venda /n [3] Consulta de Vendas no mês /n [4] Cosulta de Vendas de um Funcionarios /n [5] Vendedor com maior venda no mês /n [6] mes com mais vendas /n [7] sair`))
         switch(op){
             case 1: cadastraVendedor (vendedores) //escopo global /n 
                 break
@@ -16,9 +16,9 @@ function exe1(){
                 break
             case 4: consultaVendaVendedor(vendas)
                 break
-            case 5: MaiiorVendaMes(vendas)
+            case 5: MaiiorVendaMes(vendas) //maior venda pelo mes
                 break 
-            case 6: mesMaiorVenda (vendas)
+            case 6: mesMaiorVenda (vendas) //mes com mais vendas
                 break           
             case 7: console.log(`Finalizado o programa`)
                 break
@@ -108,10 +108,19 @@ function MaiiorVendaMes (vend){
     }
     console.log(`A maior venda é de ${maiorVenda} feita pelo vendedor ${codigo}`)
 }
-function mesMaiorVenda (vendas){
-    let mesVendas
+function mesMaiorVenda (vend){
+    let meses = [0,0,0,0,0,0,0,0,0,0,0,0,0]
     
     for (var i = Number(0); i < vend.length; i++ ){
-        
+            let posicao = vend[i].mes - 1
+            meses[posicao] = meses[posicao] + vend[i].valor
     }
+    let maiorvalor = meses[0]
+    for (var i = Number(0); i < VTTRegion.length; i++){
+        if(vend[i].valor > maiorvalor){
+            maiorvalor = vend[i].valor
+        }
+    }
+    let posicao = vend.indexOf(maiorvalor)
+    console.log(`Mês com mais vendas ${posicao + 1} e o vvalor é ${maiorvalor}`)
 }
