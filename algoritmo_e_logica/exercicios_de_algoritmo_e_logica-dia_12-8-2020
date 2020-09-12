@@ -143,3 +143,29 @@ Inicio
    Fimpara
    
 Fimalgoritmo
+----------------------------------------------------------------------------------
+/*Divisão sem o fator dividir apenas com -
+Algoritmo "aula_dia_04-09_exe2"
+
+Var
+   n1, n2: inteiro
+   res: real
+   
+funcao divi (x, y: inteiro) : real
+inicio
+   enquanto (x <= y) faca
+      Divi <- Divi + 1
+      x <- x - b
+   fimenquanto
+fimfuncao
+
+Inicio
+   Escreval("Indique o primeiro valor")
+   leia (n1)
+   Escreval("Indique o segundo valor")
+   leia (n2)
+   res <- divi (n1, n2)
+   escreva (res)
+
+Fimalgoritmo
+------------------------------------------------------------------------------------------
