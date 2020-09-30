@@ -38,13 +38,30 @@ function cadastro (vet, ava) {
 
         vet[i].push(carros)
 
+        ava[i] = [] //Inicializa dnetro do vetor
+
         for (let j = Number(0); j < 5; j++){
-            for (let i = Number(0); i < 4; i++){
-                ava[i][j] = Number(`Informe-nos a nota da Avaliação ${j}`)
-            }
-        }
+            ava[i][j] = Number(`Informe-nos a nota da Avaliação ${j}`)
         }
     }
+}
+/* MODELO DE CORREÇÃO PROVA
+function cadastra(vet, mat){
+    for(let i=0;i<4;i++){
+        let carro = new Object()
+        carro.marca = prompt(`Marca`)
+        carro.modelo = prompt(`Modelo`) 
+        carro.ano = Number(prompt(`Ano`))
+        carro.valor = Number(prompt(`Valor`)) 
+        // insere no vetor
+        vet.push(carro)
+        mat[i] = [] // inicializa o vetor dentro do vetor
+        for(let j=0;j<5;j++){
+            mat[i][j] = Number(prompt(`Nota`))
+        }
+    }
+}
+*/
 
 
 function mediaNota (vet, ava, med){
@@ -53,10 +70,22 @@ function mediaNota (vet, ava, med){
             for (let j = Number(0); i < 5; i++){
                 med[i] = ava[i][j] + med[i]
             }
-            console.log(`a média do ${vet[i].marca} , ${vet[i].modelo}, é de ${med[i] / 4}`)
+            med[i] = med[i] / 5
+            console.log(`a média do ${vet[i].marca} , ${vet[i].modelo}, é de ${med[i]}`)
         }
     } else {`Não há registro de carros`}
 }
+/* MODELO DE CORREÇÃO DA PROVA
+function calculaMedia(vet, mat) {
+    for(let i=0;i<4;i++){
+        for(let j=0;j<5;j++){
+            vet[i].media = vet[i].media + mat[i][j]
+        }
+        vet[i].media = vet[i].media / 5
+        console.log(vet[i])
+    }
+}
+*/
 
 function menorAva (vet, ava){
     if (vet.length != 0) {
@@ -73,5 +102,20 @@ function menorAva (vet, ava){
     } else {`Não há registros de carros`}
 
 }
+/* MODELO APRESENTADO DE CORREÇÃO
+function calculaModelo(vetor, matriz) {
+    for(let j=0;j<5;j++){
+        let menor = mat[0][j]
+        let modelo = vet[0].modelo
+        for(let i=0;i<4;i++){
+            if (mat[i][j] < menor){
+                menor = mat[i][j]
+                modelo = vet[i].modelo
+            }
+        }
+        console.log(`${modelo} - ${menor}`)
+    }
+}
+*/
 
 chefe()
