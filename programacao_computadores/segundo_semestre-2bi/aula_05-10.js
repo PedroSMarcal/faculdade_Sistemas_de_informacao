@@ -82,7 +82,7 @@ function chefe(){
 
 }
 function eleva(valorP, posi){
-    if (posi / 2 == 0){
-        return Math.pow(valorP)
+    if (posi % 2 == 0){
+        return Math.pow(valorP, 2)
     }
 }
