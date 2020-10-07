@@ -84,5 +84,24 @@ function chefe(){
 function eleva(valorP, posi){
     if (posi % 2 == 0){
         return Math.pow(valorP, 2)
+    } else {
+        return elemento
     }
 }
+
+//criar var do tipo função
+
+let a = function (x, y){
+    return x + y
+}
+console.log(a (10, 20))
+
+let soma = function (li, ls){//limite inferior LI - LS limite superior
+    var aux = 0
+    for (let i = li; i <= ls; i++){
+        aux = aux + i     
+    }
+    return aux
+}
+console.log(soma(10, 20))
+/*-----------------------------------------------------------------------------------------------------*/
