@@ -80,15 +80,19 @@ function mult (objeto){
 mult(vetor)
 
 //6
+var maiorele = vetor[0].ano
 let velha = function (vet) {
-    var mais = vet.ano[1]
-    var maisV = vet.forEach(velha2);
-    console.log(`O mais velho é `)
+    vet.forEach(velha2);
+    console.log(maior)
 }
 
 function velha2 (objeto) {
-    return objeto.ano < mais    
+    if (objeto.ano < maiorele) {
+        maiorele = objeto.ano
+    }
 }
+
+velha(vetor)
 /*
 
 CORREÇÃO DANIEL
