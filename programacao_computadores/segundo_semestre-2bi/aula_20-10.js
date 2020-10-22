@@ -91,3 +91,20 @@ let busca = function(vet){
 }
 
 /*LIÇÃO DE CASA FAZER OS EX. do dia 19-10 COM ARROW FUNCTION*/
+
+// 3 
+let soma = function (vet){ // o 0 onde inicia o primeiro valor como 0 e não como um objeto
+console.log(`A soma é ${vet.reduce((acumulador, objeto) => acumulador + objeto.valor )}`)
+
+}
+
+//4
+
+let mostra = function (vet) {
+    marca = prompt(`Informe-nos a marca`)
+    let.novos = vet.filter((objeto) => objeto.marca == marca) //retorna os existentes
+    console.log(novos)
+}
+
+
+
