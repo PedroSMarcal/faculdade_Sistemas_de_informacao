@@ -56,6 +56,8 @@ print("A soma é de {}".format(soma))
 
 # 2
 #Construa um programa que calcule a média aritmética de um conjunto de números pares fornecidos pelo usuário. O usuário irá fornecer um total de 10 números. Observe que nada impede que o usuário forneça quantos números ímpares quiser, com a ressalva de que eles não poderão ser acumulados.
+#Python é capaz de iniciar duas variaveis na mesma linha ex:
+#cont = soma = 0
 indice = 0
 pares = 0
 valor = 0
@@ -87,7 +89,7 @@ for n in range(1, 540, 60):
     min -= 1
     sec = 60
     for i in range (1, 61):
-        print('{} :  {:2}'.format(min, sec - i))
+        print('{} :  {:0>2}'.format(min, sec - i))
 
 # 4
 '''
@@ -105,3 +107,13 @@ eles não poderão ser acumulados.
 print('O programa só parara quando for inserido 0')
 while (valor != 0):
     valor = int(input('Insira o valor'))
+
+#Coreeção
+#biblioteca 
+import time
+
+print('10 : 00')
+for m in range(9, -1, -1):
+    for s in range(59, -1, -1):
+        print('{:0>2} : {:0>2}'.format(m, s))
+        time.sleep(1)
