@@ -69,15 +69,13 @@ i = soma = 0
 n1 = 0    
 while(i < qntAlunos):
     n1 = int(input('Informe-nos a media aritmetica do {}° aluno \n'.format(i + 1)))
-    mediaAlun.append = n1
+    mediaAlun.append(n1)
     soma += n1  
     i += 1
 
 media_esc = soma / qntAlunos
 
 print('A media escolar é de {}'.format(media_esc))
-
-
 
 '''
 Fazer um programa que leia um vetor de 20 números inteiros e determine qual o maior e o menor número do vetor e imprima os dois valores.
