@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        consomeAPI = () => {
+            //checar o  estado da requisição
+            //        pronto para enviar
+            if ((requisicao.readyState == 4) && (requisicao.status >= 200) && (requisicao <= 400)){
+                //cep usuario
+            let cep = Number(document.getElementById('cep').value)
+            // criar um objetyo que permite requisição ao servidor
+            // é um objeto que fornece funcionalidade para um cliente para transferir dados de um cliente e um servidor
+            // XML - linguagem de marcação extensivel
+            //  HTTP - hypertext transfer protocol
+            // Request - Requisiçã
+            let requisicao = new XMLHttpRequest()
+            let url = `https://viacep.com.br/ws/${cep}/json`
+            //abre a requisição do tipo Get (consulta)
+            requisicao.open('GET', url, true)
+            // ao carregar a requisição 
+            requisicao.onload = function (){
+                // vamos transformar a resposta em um formato JSON (formato de dado e valor)
+                let resposta = JSON.parse(requisicao.responseText)
+                // alimentar o forms com resposta
+                document.getElementById("logradouro").innerHTML = resposta.logradouro
+                document.getElementById("bairro").innerHTML = resposta.bairro
+                document.getElementById("localidade").innerHTML = resposta.localidade
+                document.getElementById("uf").innerHTML = resposta.uf
+
+            }
+            // envia a requisição
+            requisicao.send()
+            } 
+            else {
+                console.log('não veio resposta')
+            }
+            
+            requisicao.onerror = function(){
+                console.error(`ERROR ${requisicao}`)
+            }
+        }
+    </script>
+    <title>Pegar Cpf</title>
+
+</head>
+<body>
+    <div class="container"> <!--padraõ bootstrap-->
+        <form>
+            <div class="form-group"> <!--agrupa os elementos da div-->
+                <label> CEP </label>
+                <input type="number" id="cep" class="form-control"> <!--dados de entrada do formulario-->
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary" onclick="consomeAPI()"> consulta CEP </button>
+            </div>
+            <div class="form-group">
+                Logadouro <label id="logradouro"> </label>
+            </div>
+            <div class="form-group">
+                Bairro <label id = "bairro"></label>
+            </div>
+            <div class="form-group">
+                Localidade <label id="localidade"></label>
+            </div>
+            <div class="form-group">
+                UF <label id="uf"></label>
+            </div>
+
+        </form>
+    </div>
+    
+</body>
+</html>
+
+<!-- Lição de Casa, fazer um site para banco de dados de filmes series http://www.omdbapi.com/
+fazer um site com API 
+s == subtitulo
+fazer um app que permite mostrar uma lista de banco de dados para pesquisare a maior nivel de informação-->

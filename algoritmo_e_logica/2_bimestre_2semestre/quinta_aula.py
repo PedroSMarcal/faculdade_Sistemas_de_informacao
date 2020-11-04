@@ -103,6 +103,5 @@ Fazer um programa que imprima os valores até a N-ésima linha (no formato apres
 n = int(input('Informe até que linha  você deseja'))
 n1 = 0
 while (n != n1):
-    n1 += 1
-    
+    n1 += 1    
 

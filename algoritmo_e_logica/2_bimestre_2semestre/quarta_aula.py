@@ -80,7 +80,19 @@ print('A media escolar é de {}'.format(media_esc))
 '''
 Fazer um programa que leia um vetor de 20 números inteiros e determine qual o maior e o menor número do vetor e imprima os dois valores.
 '''
+vet = []
 
+for i in range(20):
+    vet.append(int(input('Informe- nos o número inteiro')))
+
+menor = vet[0]
+maior = vet[0]
+
+for i in range(20):
+    if(vet[i] < menor):
+        menor = vet[i]
+
+    
 '''
 Crie um programa que leia um vetor de 20 números inteiros e em seguida divida estes números em outros 2 novos vetores, separando os números pares dos números ímpares.
 '''
