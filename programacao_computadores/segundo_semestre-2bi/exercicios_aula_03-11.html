@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        api = () => {
+            
+        }
+    </script>
+ <title>Filmes</title>
+
+</head>
+<body>
+    <div class="container"> <!--padraõ bootstrap-->
+        <form>
+            <div class="form-group"> <!--agrupa os elementos da div-->
+                <label>Filme </label>
+                <input type="number" id="filme" class="form-control"> <!--dados de entrada do formulario-->
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary" onclick="consomeAPI()"> Filmes </button>
+            </div>
+            <div class="form-group">
+                nome <label id="nome"> </label>
+            </div>
+            <div class="form-group">
+                Bairro <label id = "bairro"></label>
+            </div>
+            <div class="form-group">
+                Localidade <label id="localidade"></label>
+            </div>
+            <div class="form-group">
+                UF <label id="uf"></label>
+            </div>
+
+        </form>
+    </div>
+    
+</body>
+</html>
