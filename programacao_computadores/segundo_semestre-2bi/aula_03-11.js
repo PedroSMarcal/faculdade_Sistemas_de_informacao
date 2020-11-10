@@ -9,9 +9,6 @@ funções acessadas apenas por programação
 servidor do correio chamado viacep
 */
 
-/*
-API VIA CEP
-*/
 
 
 
