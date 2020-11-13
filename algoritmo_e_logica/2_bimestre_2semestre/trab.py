@@ -78,17 +78,36 @@ Se mais de um número for repetido com frequência máxima igual, não existirá
 Escreva uma função que aceite um vetor de números e retorne a moda ou uma indicação de que
 a moda não existe.
 
-#iniciar vetor
-moda = []
+# iniciar vetor
+numeros = []
 
-#requisição ao usuario quantos valores serão inseridoss
-pontoDeParada = int(input('Informe quantos números você irá inserir: '))
+#tamanho do vetor 
+valUsuario = int(input('Informe-nos a quantidade de números para moda: '))
 
-#entrada do usuario
-for i in range(pontoDeParada):
-  moda.append(int(input('Informe o número desejado \n')))
+#inserir valores
+for i in range(valUsuario):
+  numeros.append(int(input('Informe o número a ser inserido \n')))
 
-#
+valores = []
+vetordecontagem = []
+#teste para ver quais os números sem repetições
+for i in range(len(numeros)):
+  vetordecontagem.append(numeros.count(numeros[i]))
+  valores.append(numeros[i])
+
+print(vetordecontagem) 
+print(valores)  
+  
+  #for n in range(len(numeros)):
+
+  #teste para entrada no vetor
+'''
+for n in range(valUsuario):
+  print(n)
+  numeros[i] != valores[n] 
+  valores.append(numeros[i])
+'''
+
 
    
     
