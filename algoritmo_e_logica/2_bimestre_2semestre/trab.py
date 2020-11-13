@@ -72,12 +72,12 @@ else:
   else:
     print('Não houve valores inseridos')
     
- 
+''' 
 2. A MODA de um vetor de números é o número m no vetor que é repetido com maior frequência.
 Se mais de um número for repetido com frequência máxima igual, não existirá uma moda.
 Escreva uma função que aceite um vetor de números e retorne a moda ou uma indicação de que
 a moda não existe.
-
+'''
 # iniciar vetor
 numeros = []
 
@@ -107,6 +107,45 @@ for n in range(valUsuario):
   numeros[i] != valores[n] 
   valores.append(numeros[i])
 '''
+
+
+'''
+#Jogo Da Forca
+
+#entrada da palavra,
+#iniciar o vetor para guardar as strings
+#vetor que mostra a atualidade da função
+#ainda uma var aux para recolher os index
+#com as chances maximas e condição de parada caso o usuario ganhe
+import os 
+'''
+palavra = str(input('Informe qual a palavra \n')).strip()
+os.system('cls' if os.name == 'nt' else 'clear')
+vetpalavra = []
+mostrar = []
+chances = 6
+vitoria = False
+
+#transforma a palavra em um vetor
+for i in range(len(palavra)):
+  vetpalavra.append(palavra[i])
+  mostrar.append('')
+
+#iniciar o game
+while (chances != 0) or (vitoria != True) :
+  letra = str(input('Informe a letra \n'))
+  for i in range(len(vetpalavra)):
+    if palavra.find(letra) != -1:  
+      if letra == vetpalavra[i]:
+        mostrar[i] = vetpalavra[i]
+    else: 
+      chances -= 1
+  os.system('cls' if os.name == 'nt' else 'clear')  
+  print(mostrar)
+  aux = ('').join(mostrar)
+  if aux.find(palavra) != -1:
+    vitoria == True
+
 
 
    
