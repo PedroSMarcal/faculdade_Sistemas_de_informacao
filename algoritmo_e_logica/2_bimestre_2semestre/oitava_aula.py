@@ -34,6 +34,35 @@ if (resto == cpfvet[9]):
 else:
     print('Ta errado o cpf')
 
+#
+cpf = str(input('Informe seu cpf, não utilize nenhum caracter especial \n'))
+multiplica = 10
+soma = 0
+for i in range(9):
+    soma += multiplica + int(cpf[i])
+    multiplica -= 1
+
+resto = soma % 11
+codigo1 = 11 - resto
+if resto == 0 or resto == 1:
+    resto = 0
+
+if codigo1 == int(cpf[10]):
+    multiplica = 11
+    soma = 0
+    for i in range(10):
+        soma += multiplica + int(cpf[i])
+        multiplica -= 1
+
+    resto = soma % 11
+    codigo2 = 11 - resto
+
+    if codigo2 == int(cpf[11]):
+        print('CPF VÁLIDO')
+    else:
+        print('CPF INVÁLIDO')
+ 
+
 #//////////////////////////////////////////////
 #Fazer uma função que receba o valor de N como parâmetro, calcular e retorne o valor do somatório S: S = 1 + 2/4 + 3/9 + 4/16 + … + N/(N*N)
 
