@@ -106,3 +106,33 @@ for i in range(3):
     
 print('As quantidade de notas acima de 20 porcento são {} e a quantidade de notas abaixo é {}'.format(somamaior, somamenor))
 print('A diferença são as notas que ão foram nem acima nem abaixo da media')
+
+#
+#azer uma função que verifica se uma palavra, frase ou número é um palíndromo. Um palíndromo é qualquer sequência de caracteres que seja a mesma se lida da esquerda para a direita ou da direita para a esquerda. Por exemplo, a palavra “osso” é um palíndromo, pois é idêntica não importa o sentido da leitura.
+
+def palindromo (palavra, palavra2, ta):
+  if palavra == palavra2:
+    print('A palavra é palíndromo')
+  else:
+    print('A palavra não é palíndromo') 
+
+palavra = str(input('Informe a plavra e veremos se é um palíndromo: \n'))
+tam = len(palavra)
+for i in range(tam, 0, -1):
+  palavra2 = palavra[i]
+print(palavra2)
+
+palindromo(palavra, palavra2, tam)
+#palidromo(osso)
+
+#F#aça um programa que preencha um vetor de N elementos inteiros com a sequência de Fibonacci (primeiro elemento é 1, segundo é 1 e em seguida, cada termo subsequente é a soma dos dois anteriores).
+
+tam = int(input('Informe- o tamanho do vetor \n'))
+vet = [1, 1]
+x = 0
+
+for i in range(2, tam, 1):
+   x = vet[i-1] + vet[i-2]
+   vet.append(x)
+
+print(x)
