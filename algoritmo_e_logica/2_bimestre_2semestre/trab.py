@@ -107,6 +107,48 @@ for n in range(valUsuario):
   numeros[i] != valores[n] 
   valores.append(numeros[i])
 '''
+#iniciar var e fazer o tamanho do vetor
+moda = []
+m = int(input('Quantos valores você ira inserir \n'))
+
+#função de entrada
+def entrada (n, mod ):
+  for i in range(n):
+    mod.append(int(input('Informe o valor \n')))
+
+#chamar função
+entrada(m, moda)
+moda.sort()
+
+#função para testar a moda
+def testeModa (mod):
+  #contagem
+  vet = []
+  #vetor auxiliar
+  aux = []
+  for i in range(len(mod)):
+    vet.append(mod.count(mod[i]))
+
+  maiorValorContagem = 0
+  for i in range(len(vet)):
+    if vet[i] > maiorValorContagem:
+      maiorValorContagem = vet[i]
+
+  vet2 = []
+  for i in range(len(vet)):
+    if vet[i] >= maiorValorContagem:
+      aux.append(mod.count(mod[i]))
+      vet2.append(mod[i])
+
+
+  aux.sort()
+  
+  
+  print('O vetor é :\n{}\ne a contagem é \n{}:'.format(vet2, aux))
+
+#chamar a função para testar a moda
+testeModa(moda)  
+
 
 
 '''
