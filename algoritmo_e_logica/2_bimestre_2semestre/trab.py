@@ -159,8 +159,7 @@ testeModa(moda)
 #vetor que mostra a atualidade da função
 #ainda uma var aux para recolher os index
 #com as chances maximas e condição de parada caso o usuario ganhe
-import os 
-'''
+import os
 palavra = str(input('Informe qual a palavra \n')).strip()
 os.system('cls' if os.name == 'nt' else 'clear')
 vetpalavra = []
@@ -174,19 +173,32 @@ for i in range(len(palavra)):
   mostrar.append('')
 
 #iniciar o game
-while (chances != 0) or (vitoria != True) :
+while (chances != 0) and (vitoria != True):
+
   letra = str(input('Informe a letra \n'))
   for i in range(len(vetpalavra)):
     if palavra.find(letra) != -1:  
       if letra == vetpalavra[i]:
-        mostrar[i] = vetpalavra[i]
-    else: 
-      chances -= 1
+        mostrar[i] = vetpalavra[i] 
+      
+  if palavra.find(letra) == -1:  
+    chances = chances - 1 
+      
+
   os.system('cls' if os.name == 'nt' else 'clear')  
   print(mostrar)
   aux = ('').join(mostrar)
   if aux.find(palavra) != -1:
-    vitoria == True
+    vitoria = True
+
+  print('Você ainda possue {} chances'.format(chances))
+else:
+  if vitoria == True:
+    print('Você venceu Parabens!!!')
+  else:
+    print('Mais sorte na proxima vez, a palavra era: {}'.format(palavra))
+
+
 
 
 
