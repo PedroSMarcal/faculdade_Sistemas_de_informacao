@@ -1,4 +1,5 @@
 '''
+
 1 - Faça um programa que use a função valorPagamento para determinar o valor a ser pago por uma
 prestação de uma conta. 
 O programa deverá solicitar ao usuário o valor da prestação e o número
@@ -72,40 +73,12 @@ else:
   else:
     print('Não houve valores inseridos')
     
-''' 
+------------------------------------------------------------------------------ 
+'''
 2. A MODA de um vetor de números é o número m no vetor que é repetido com maior frequência.
 Se mais de um número for repetido com frequência máxima igual, não existirá uma moda.
 Escreva uma função que aceite um vetor de números e retorne a moda ou uma indicação de que
 a moda não existe.
-'''
-# iniciar vetor
-numeros = []
-
-#tamanho do vetor 
-valUsuario = int(input('Informe-nos a quantidade de números para moda: '))
-
-#inserir valores
-for i in range(valUsuario):
-  numeros.append(int(input('Informe o número a ser inserido \n')))
-
-valores = []
-vetordecontagem = []
-#teste para ver quais os números sem repetições
-for i in range(len(numeros)):
-  vetordecontagem.append(numeros.count(numeros[i]))
-  valores.append(numeros[i])
-
-print(vetordecontagem) 
-print(valores)  
-  
-  #for n in range(len(numeros)):
-
-  #teste para entrada no vetor
-'''
-for n in range(valUsuario):
-  print(n)
-  numeros[i] != valores[n] 
-  valores.append(numeros[i])
 '''
 #iniciar var e fazer o tamanho do vetor
 moda = []
@@ -126,8 +99,14 @@ def testeModa (mod):
   vet = []
   #vetor auxiliar
   aux = []
+
+  aux2 = 0
   for i in range(len(mod)):
-    vet.append(mod.count(mod[i]))
+    aux2 = 0
+    for n in range(len(mod)):
+      if (mod[i] == mod[n]):
+        aux2 += 1
+    vet.append(aux2)
 
   maiorValorContagem = 0
   for i in range(len(vet)):
@@ -140,18 +119,28 @@ def testeModa (mod):
       aux.append(mod.count(mod[i]))
       vet2.append(mod[i])
 
-
   aux.sort()
-  
-  
-  print('O vetor é :\n{}\ne a contagem é \n{}:'.format(vet2, aux))
 
-#chamar a função para testar a moda
-testeModa(moda)  
+  pri = 0
+  for i in range(len(vet2)):
+    for n in range(len(vet2)):
+      if vet2[i] != vet2[n]:
+        pri = 'Não existe moda por haver mais de 1 valor com contagem maxima'
+        break
+      else:
+        pri = vet2[0]
+      
+  if pri == vet2[0]:
+    print('O valor foi {}'.format(pri))
+    print('com a contagem de {}'.format(aux[0]))
+  else:
+    print('Não Há moda')
+
+  #chamar a função para testar a moda
+testeModa(moda) 
 
 
-
-'''
+--------------------------------------------------------------------------------------------
 #Jogo Da Forca
 
 #entrada da palavra,
@@ -159,6 +148,7 @@ testeModa(moda)
 #vetor que mostra a atualidade da função
 #ainda uma var aux para recolher os index
 #com as chances maximas e condição de parada caso o usuario ganhe
+
 import os
 palavra = str(input('Informe qual a palavra \n')).strip()
 os.system('cls' if os.name == 'nt' else 'clear')
