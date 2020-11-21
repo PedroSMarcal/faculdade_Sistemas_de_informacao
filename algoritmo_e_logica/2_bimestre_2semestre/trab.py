@@ -72,8 +72,6 @@ else:
       print('{}° = R$ {:.2f}'.format(i + 1, pagamentosFinais[i]))
   else:
     print('Não houve valores inseridos')
-    
------------------------------------------------------------------------------- 
 '''
 2. A MODA de um vetor de números é o número m no vetor que é repetido com maior frequência.
 Se mais de um número for repetido com frequência máxima igual, não existirá uma moda.
@@ -140,7 +138,7 @@ def testeModa (mod):
 testeModa(moda) 
 
 
---------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------
 #Jogo Da Forca
 
 #entrada da palavra,
@@ -189,7 +187,108 @@ else:
     print('Mais sorte na proxima vez, a palavra era: {}'.format(palavra))
 
 
+  #1
+  #função 
+def valorPagamento2 (pag, atraso):
+  #pagamento no dia
+  if  atraso == 0:
+    print('O valor de pagamento será de {:.2f}'.format(pag))
+    return pag
+  #pagamento sem atraso
+  elif atraso < 0:
+    print('O valor de pagamento será de {:.2f}'.format(pag))
+    return pag
+  #pagamento com atraso
+  else:
+    multa = pag * 3 / 100
+    multaAcumulativa = atraso * 0.1 / 100
+    totalDePag = float((multa + pag) + multaAcumulativa)
+    print('O valor de pagamento será de {:.2f}'.format(totalDePag))
+    return totalDePag
 
+#informar ao usuario sobre a posição de parada
+print('O programa se repetira enquanto o o valor de prestação for diferente de 0: ')
+
+#iniciar vetorValoresFinais
+vetorValoresFinais = []
+#entrada
+prestacao = float(input('Informe o valor da prestação: R$ '))
+
+#repetição
+while prestacao != 0:
+  #entrada de dias 
+  numeroDiasAtraso = int(input('Informe a quantidade de dias atrasado, caso seja adiantado indique 0: '))
+
+  #chamada da função que faz os calculos
+  vetorValoresFinais.append(valorPagamento2(prestacao, numeroDiasAtraso))
+
+  #pedir novamente o valor pro usuario
+  prestacao = float(input('Informe o valor da prestação: R$ '))
+
+else:
+
+  print('---------------')
+  print('RELATORIO')
+  print('---------------')
+  #calcular o total
+  total = 0 
+  for i in range(len(vetorValoresFinais)):
+    total = total + vetorValoresFinais[i]
+
+  #apresentação de resultados  
+  #quando há valores
+  if len(vetorValoresFinais) > 0:
+    print('Valores Finais')
+    print('A quantidade de transições que ocorreu foi de {} \ncom os valores finais de: '.format(len(vetorValoresFinais)))
+    for i in range(len(vetorValoresFinais)):
+      print('O {}° foi de R$ {:.2f}'.format(i+1, vetorValoresFinais[i]))
+    print('E a soma total das transações foram de R${:.2f}'.format(total))
+  else:
+    print('Nenhum valor inserido')
+    
+#------------------------------------------------------------------------------ 
+
+
+
+#####################################################################
+
+#3. Fazer um programa que desenvolva um Jogo da Forca.
+
+palavra = str(input('Informe a palavra: '))
+chance = 6
+aux = []
+palavra1 = []
+contador = 0
+for i in range(len(palavra)):
+  palavra1.append(palavra[i])
+  aux.append('')
+
+while chance != 0 and palavra1 != aux:
+  letra = str(input('Informe a letra: ')) 
+
+  for i in range(len(palavra)):
+    if letra == palavra1[i]:
+      contador += 1
+  
+  if contador != 0:
+    for i in range(len(palavra)):
+      if palavra1[i] == letra: 
+        aux[i] = letra
+  else: 
+    chance -= 1  
+
+  contador = 0
+  print(chance)
+  print(aux)
+else:
+  if (palavra1 == aux):
+    print('-' * 20)
+    print('PARABENS VOCÊ GANHOU')
+    print('-' * 20)    
+  else:
+    print('-' * 40)
+    print('Mais sorte na proxima a palavra era: {}'.format(palavra))
+    print('-' * 40)
 
 
    
