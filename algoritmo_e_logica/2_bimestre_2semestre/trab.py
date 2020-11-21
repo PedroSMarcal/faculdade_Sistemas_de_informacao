@@ -248,6 +248,60 @@ else:
     
 #------------------------------------------------------------------------------ 
 
+#2. 
+'''
+A MODA de um vetor de números é o número m no vetor que é repetido com maior frequência.
+Se mais de um número for repetido com frequência máxima igual, não existirá uma moda.
+Escreva uma função que aceite um vetor de números e retorne a moda ou uma indicação de que
+a moda não existe.
+'''
+def moda (mo):
+  frequencia = []
+  for i in range(len(mo)):
+    contador = 0
+    for n in range(len(mo)):
+      if mo[i] == mo[n]:
+        contador += 1
+    # o menos 1 retia o valor repetido da mesma posição
+    frequencia.append(contador - 1)
+
+  #pegar a maior frequencias
+  maiorFrequencia = 0 
+  for i in range(len(frequencia)):
+    if maiorFrequencia <= frequencia[i]:
+      maiorFrequencia = frequencia[i]
+  
+  aux = []
+
+  for i in range(len(frequencia)):
+    if frequencia[i] == maiorFrequencia:
+      aux.append(mo[i])
+
+
+  aux2 = aux[0]
+  aux3 = 1
+  for i in range(len(aux)):
+    if aux[i] != aux2:
+      aux3 = 0
+    else:
+      aux3 = 1
+
+  if aux3 == 1:
+    print('Há moda é: {} com frequencia de {}'.format(aux2,len(aux)))
+  else: 
+    print('não há moda')
+
+
+#entrada do tamanho do vetor
+x = int(input('quantos valores será inserido ? '))
+mod = []
+
+#entrada dos elementos do vetor
+for i in range(x):
+  mod.append(int(input('Informe-nos o valor ')))
+
+mod.sort()
+moda(mod)
 
 
 #####################################################################
