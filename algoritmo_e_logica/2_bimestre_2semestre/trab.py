@@ -255,17 +255,15 @@ Se mais de um número for repetido com frequência máxima igual, não existirá
 Escreva uma função que aceite um vetor de números e retorne a moda ou uma indicação de que
 a moda não existe.
 '''
-def moda (mo):
+def moda2 (mo):
   frequencia = []
   for i in range(len(mo)):
     contador = 0
     for n in range(len(mo)):
       if mo[i] == mo[n]:
         contador += 1
-    # o menos 1 retia o valor repetido da mesma posição
     frequencia.append(contador - 1)
 
-  #pegar a maior frequencias
   maiorFrequencia = 0 
   for i in range(len(frequencia)):
     if maiorFrequencia <= frequencia[i]:
@@ -292,11 +290,9 @@ def moda (mo):
     print('não há moda')
 
 
-#entrada do tamanho do vetor
 x = int(input('quantos valores será inserido ? '))
 mod = []
 
-#entrada dos elementos do vetor
 for i in range(x):
   mod.append(int(input('Informe-nos o valor ')))
 
