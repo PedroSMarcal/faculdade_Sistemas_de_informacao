@@ -1,0 +1,227 @@
+'''
+1
+Faça um programa para imprimir:
+    1
+    2   2
+    3   3   3
+    .....
+    n   n   n   n   n   n  ... n
+para um n informado pelo usuário. Use uma função que receba um valor n inteiro e imprima até a n-ésima linha.
+'''
+n = int(input('Informe até qual linha a se fazer: '))
+
+def mostra (n):
+  for i in range(n):
+    print(str(i) * i) 
+
+mostra(n)
+
+'''
+2
+Faça um programa para imprimir:
+    1
+    1   2
+    1   2   3
+    .....
+    1   2   3   ...  n
+para um n informado pelo usuário. Use uma função que receba um valor n inteiro imprima até a n-ésima linha.
+'''
+n = int(input('Informe até qual linha a se fazer: '))
+
+def mostra2 (n):
+  aux = []
+  for i in range(1, n):
+    aux.append(i)
+    print(aux) 
+
+mostra2(n)
+
+'''
+3
+Faça um programa, com uma função que necessite de três argumentos, e que forneça a soma desses três argumento
+'''
+n1 = int(input('Informe-nos o 1° número: '))
+n2 = int(input('Informe-nos o 2° número: '))
+n3 = int(input('Informe-nos o 3° número: '))
+
+def soma (n1, n2, n3):
+  print('A soma é : {}'.format(n1 + n2 + n3))
+  return n1 + n2 + n3
+
+som = soma(n1, n2, n3)
+
+'''
+4
+Faça um programa, com uma função que necessite de um argumento. A função retorna o valor de caractere ‘P’, se seu argumento for positivo, e ‘N’, se seu argumento for zero ou negativo.
+'''
+valor = float(input('Informe-nos o número: '))
+
+def testeValor (n):
+  if n <= 0:
+    print('N')
+    return 'N'
+  else:
+    print('P')
+    return 'P'
+
+cara = testeValor(valor) 
+
+'''
+5
+Faça um programa com uma função chamada somaImposto. A função possui dois parâmetros formais: taxaImposto, que é a quantia de imposto sobre vendas expressa em porcentagem e custo, que é o custo de um item antes do imposto. A função “altera” o valor de custo para incluir o imposto sobre vendas.
+'''
+def somaImposto (pam1, pam2):
+  if pam1 >= 0:
+    pam2 = (pam1 * pam2 /100) + pam2
+    return pam2
+  else:
+    print('Valor de imposto negativo')
+
+taxaImpostos = int(input('Informe-nos a porcentagem do imposto: % '))
+custo = float(input('Informe o custo do produto: '))
+
+custo = somaImposto(taxaImpostos, custo)
+print(custo)
+
+'''
+6
+Faça um programa que converta da notação de 24 horas para a notação de 12 horas. Por exemplo, o programa deve converter 14:25 em 2:25 P.M. A entrada é dada em dois inteiros. Deve haver pelo menos duas funções: uma para fazer a conversão e uma para a saída. Registre a informação A.M./P.M. como um valor ‘A’ para A.M. e ‘P’ para P.M. Assim, a função para efetuar as conversões terá um parâmetro formal para registrar se é A.M. ou P.M. Inclua um loop que permita que o usuário repita esse cálculo para novos valores de entrada todas as vezes que desejar.
+'''
+#INCOMPLETO
+def converterHora (h):
+  if h >= 12:
+    return h - 12, 'P'
+  else:
+    return h, 'A'   
+
+def mostrar (h, m):
+  if h >= 0:
+    print('A hora convertida é de: {}: {}  P.M'.format(h, m)) 
+  else:
+    print('A hora convertida é de: {}: {}  A.M'.format(h, m)) 
+
+hora = int(input('Informe a hora: '))
+minu = int(input('Informe o minuto: '))
+
+if hora >= 0 and hora < 25:
+  hora = converterHora(hora)
+  mostrar(hora, minu)
+else:
+  print('Valor de hora inválida para conversão')
+
+
+'''
+Faça um programa que use a função valorPagamento para determinar o valor a ser pago por uma prestação de uma conta. O programa deverá solicitar ao usuário o valor da prestação e o número de dias em atraso e passar estes valores para a função valorPagamento, que calculará o valor a ser pago e devolverá este valor ao programa que a chamou. O programa deverá então exibir o valor a ser pago na tela. Após a execução o programa deverá voltar a pedir outro valor de prestação e assim continuar até que seja informado um valor igual a zero para a prestação. Neste momento o programa deverá ser encerrado, exibindo o relatório do dia, que conterá a quantidade e o valor total de prestações pagas no dia. O cálculo do valor a ser pago é feito da seguinte forma. Para pagamentos sem atraso, cobrar o valor da prestação. Quando houver atraso, cobrar 3% de multa, mais 0,1% de juros por dia de atraso.
+'''
+import os
+def valorPagamento (val, dda, con, pag): #dda = dias de atraso / val = valor
+  pagamento = float(0)
+  aux = float(0)
+  if dda == 0:
+    pagamento = val
+    pag.append(pagamento)
+    print('O valor a se pagar é de: R$ {:.2f}'.format(pagamento))
+  else: 
+    aux = (dda * 0.1/100)
+    pagamento = val + ((val * 3 / 100) + aux)
+    pag.append(pagamento)
+    print('O valor a se pagar é de: R$ {:.2f}'.format(pagamento))
+
+#valores para relatório no final
+cont = 0
+pagamentosFinais = []
+#Entrada de valores 
+print('Insisa um valor acima ou igual a R$ 0.00 \n')
+valor = float(input('Informe-nos o valor da presatação em R$: '))
+print('')
+print('Caso esteja pagando adiantado por favor insira 0') 
+diasDeAtraso = int(input('Informe-nos os dias de atraso \n'))
+
+#teste para entrada na repetição 
+while (valor != 0.00): 
+  if (valor < 0.00):
+    #teste de valor caso seja menor que 1
+    while (valor < 0.00):
+      print('O valor inserido é menor que 0, insira o valor maior: ')
+      valor = float(input('Informe-nos o valor da presatação em R$: '))
+    
+  #teste dos dias caso tal seja menor que 1
+  if (diasDeAtraso < 0):
+    while (diasDeAtraso >= 0):
+      print('O valor inserido é menor que 0, insira o valor correto: ')
+      diasDeAtraso = int(input('Informe-nos os dias de atraso'))
+    
+#retorno dos paramentros 
+  os.system('cls' if os.name == 'nt' else 'clear')
+  valorPagamento(valor, diasDeAtraso, cont, pagamentosFinais)
+
+#inserir valores para não cair em cadeia
+  print('Insisa um valor acima ou igual a R$ 0.00 \n')
+  valor = float(input('Informe-nos o valor da presatação em R$: '))
+  print('')
+  print('Caso esteja pagando adiantado por favor insira 0') 
+  diasDeAtraso = int(input('Informe-nos os dias de atraso \n'))
+  
+  #aumenta o contador de valores inseridos
+  cont += 1
+
+#fim do programa
+else:
+  if (cont > 0):
+    for i in range(cont):
+      print('{}° = R$ {:.2f}'.format(i + 1, pagamentosFinais[i]))
+  else:
+    print('Não houve valores inseridos')
+
+
+'''
+Faça uma função que informe a quantidade de dígitos de um determinado número inteiro informado
+'''
+n = int(input('Informe o número inteiro: '))
+n = str(n)
+
+def contaCasa (n):
+  cont = 0
+  for i in range(len(n)):  
+    cont += 1
+  return cont
+
+digitos = contaCasa(n)
+print(digitos)
+
+'''
+Reverso do número. Faça uma função que retorne o reverso de um número inteiro informado. Por exemplo: 127 -> 721.
+'''
+def inverso(n):
+  n = str(n)
+  n = n[::-1]
+  return n
+
+n = int(input('Informe o número: '))
+
+ina = inverso(n)
+print('O inverso é: {}'.format(ina))
+
+'''
+Jogo de Craps. Faça um programa de implemente um jogo de Craps. O jogador lança um par de dados, obtendo um valor entre 2 e 12. Se, na primeira jogada, você tirar 7 ou 11, você um "natural" e ganhou. Se você tirar 2, 3 ou 12 na primeira jogada, isto é chamado de "craps" e você perdeu. Se, na primeira jogada, você fez um 4, 5, 6, 8, 9 ou 10,este é seu "Ponto". Seu objetivo agora é continuar jogando os dados até tirar este número novamente. Você perde, no entanto, se tirar um 7 antes de tirar este Ponto novamente
+'''
+import random
+dados = random.randint(2, 12)
+condica = 'Natural'
+Ponto = 0
+print(dados)
+
+if dados == 7 or dados == 11:
+  print('Voce ganhou, você é um natural')
+elif dados == 2 or dados == 3 or dados == 12:
+  aux = dados
+  while aux != dados:
+    dados = random.randint(2, 12)
+    if dados == 7:
+      print('Você perdeu')
+    elif dados != aux:
+      print('{}, {}'.format(aux, dados))
+      print('Continue jogando')
+    else:
+      print('Voc~e venceu')
+
