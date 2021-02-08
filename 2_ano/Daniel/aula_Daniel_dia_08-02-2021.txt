@@ -1,0 +1,12 @@
+paradigma - modelo, padrão, maneira
+
+exemplos de paradigma - Programação Funcional, Orientado a Objetos, Procedural, Lógico, orientados a eventos, componentes;
+
+Procedural, Funcional, Orientada a objetos (JS);
+
+JAVA - Essencialmente Orientado a Objeto
+
+classe (.JAVA)
+
+public class nome_classe {
+}
