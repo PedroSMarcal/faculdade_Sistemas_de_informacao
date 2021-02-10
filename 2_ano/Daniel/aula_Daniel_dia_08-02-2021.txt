@@ -11,6 +11,14 @@ classe (.JAVA)
 public class nome_classe {
 }
 
+PlanoDeEnsino, PortalWeb, Conceito de O.O. classes, Objetos, Instancias, Encapsulamento, Agregação, Composição, Herança, Polimorfismo, Anulação de Metódos, Classes Abstradas, Classes Interfaces;
+2° Bimestre - SpringBoot
+
+Bibliografia 
+Livro: DEITEL, Java Como Programar.
+YouTube . Orientação a Objetos com Java - Gustavo Guanabara
+
+
 Software de desenvolvimento
 
 ORACLE - DIREITOS DA JAVA
