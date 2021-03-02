@@ -1,0 +1,33 @@
+Ter um componente para analisar os dados e apresentar os dados; O cluster é algo tão discrepante se faz uma análise;
+
+R packages like ggplot or lattice;
+
+S.I gerenciamento de arquivo, programas de arquivos orientados e cada unidade organizacional (Tinha um sistema para empresa A e outro sistema B), utilizar varias funções para a usabilidade;
+
+problema mais de uma replica de arquivos para cara aplicação, e logo se houvesse alterações deveria se alterar em todas, gera redundancias e inconsistencias;
+
+Consistencia é 'estado ou carater do que é coerente';
+
+Isolamento de dados (só acesso os dados a partir de uma funcionalidade), dados gravados em discos, acesso aos dados conhecimento prévio destas estruturas;
+
+SGBD[Sistema Gerenciador de Banco de Dados] - Promove a indepencia dos dados, Cria e mantem a indepencia de banco de dados de 1 ou varios, utilizando o SGBD a segurança já vem embutido;
+
+SQL[Strutured Query Language]
+
+BASE DE DADOS - conjunto de banco de dados de uma empresa, para base de dados utiiliza-se ERP ou Data Warehouse
+
+
+SGBD - Gerenciar ou analisar banco de dados, O limite do Bd é geralmente o Tamanho do HD, durante o projeto, qual SGBD utilizar;
+
+Funções triviais
+	- metódos de Acesso (DDL, DML, DCL)
+	- Integridade Semantica(Garantia de dados sempre corretos) 
+	- Segurança (Evitar violação de consistencias dos dados):
+		-pode se falhar o HD ou servidor;
+		- Monitoramento de Transações; (transação atomica ou É 100% ou 0%)
+		- Backup (momento de ociosidade, para grandes bases ou bancos se faz o mirror onde se tem 2 BD iguais, e ai espelha o Servidor)
+	- Concorrencia [evitar acesso simultaneo]
+		- Bloqueio (lock)
+	- Independencia 
+		- Tranparencia da organização dos dados;
+		- Independencia Logica	

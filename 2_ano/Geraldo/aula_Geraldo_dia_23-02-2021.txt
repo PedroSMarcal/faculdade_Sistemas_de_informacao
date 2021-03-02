@@ -1,0 +1,62 @@
+Dados de Cunho administrativo - estimativas:
+		número de registros
+		número de valores distintos por campo
+
+Log-Backup - Repositorio de copias de BD, historico de transações;
+	
+
+DD - 
+
+Tudo em arquivos e storages diferentes:
+	Usuarios - SuperUser (SGBS): [Mantem o serviço de BD, tarefas administrativas]
+		definições de dados (incluindo indices);
+		AMbiente administração, Traduto DDL, DD, BD, LogBackup
+'		(monitoramento de desempenho do banco)
+		Recuperação Manual do DB
+
+APlicação - Acessa o BD por comandos DML, Comandos DML (Processador Run-Time);
+		
+
+Usuario adhoc - Acesso direto ao SGBD, executa operações DML sem: estar vinculado a uma aplicação que acessa o BD;
+		Interface DML, otimiza acesso;
+		Quais são os modulos e como eles funcionam;
+		Acessa o BD sem precisar de um app para acessar um SGBD
+	
+Programador -  Desenvolve aplicações no SGBD, Automatiza processos, facilitadores com regra de negocia;
+		NoSQL - Outra filosofia (entrega mais performances e velocidade);
+
+Inicio da decada de 80- Inicio dos SGBD-Rs Distribuidos (um e-commerce pode ter um BD aqui em SP, SC, e pode se fazer uma consulta com fragmentso de dados de cada estado para apresentar um resultado)
+
+SGBD'S Orientados a Objetos (SGBD-00)
+	
+Linguagem SQL se tornou internacional, logo todas as empresas necessitavam ter o suporte
+
+DECADAS DE 90
+	Classes e aplicações, data mining, bibliotecas  Digitais, WIIS (WEB INFORMATION INTEGRATION SYSTEM), Sistema para dados extraidos de varios web sites
+
+DECADAS DE 2000
+	proliferar produtores e consumidores de dados;
+	aplicações com volumes de dados da ordem de exabytes;
+
+Na hierarquia dado é o pilar da sustentação para se obter a informação;
+DADO + INFORMAÇÃO = conhecimento
+
+-*-*-*-*-*-*-***-*--*-*-*-*-*-*-*-*-*-*-*--*-*-*-
+
+Projetos de banco de dados
+Modelagem Conceitual
+Dado (não Atomico)
+Modelo Entidade-Relacimenot (MER) [Diagrama de entidade relacionamento] [diagramas de UML]
+
+/-\
+Modelagem Conceitual (Projeto Conceitual)
+/-\
+Modelagem Lógica (Projeto Logico)
+
+DBDESIGNER (MODELAGEM LOGICA)
+/-\
+Modelagem Física(Implementação)
+
+bases em forma de conceitual gera efeito em cascata;
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*--*--*-*-*-*-*-*-*-*
