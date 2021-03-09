@@ -20,5 +20,14 @@ class Pilha{
     show(){
         console.log(this.fila);
     }
+
+    isEmpty(){
+        if (this.fila === 0){
+            console.log("true")
+        }
+        else {
+            console.log("false")
+        }
+    }
 }
 

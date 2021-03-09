@@ -12,22 +12,32 @@ class Fila {
     }
 
     delete(){
-        this.fila.shift()
+        this.fila.shift();
     }
 
     show(){
-        console.log(this.fila)
+        console.log(this.fila);
     }
 
     size(){
-        console.log(length(this.fila))
+        console.log(length(this.fila));
+    }
+
+    isEmpty(){
+        if (this.pilha === 0){
+            console.log("true")
+        }
+        else {
+            console.log("false")
+        }
     }
 
 }
 
 let obj = new Fila()
-
-let choice = String(prompt('Menu \n [A]- adicionar elementos \n [B]- Apresentar \n [C]- Deletar o primeiro elemento \n [D]- Mostrar quantos elementos o objeto existe \n [E]- Sair'))
+run = true
+while (run == true) {
+    let choice = String(prompt('Menu \n [A]- adicionar elementos \n [B]- Apresentar \n [C]- Deletar o primeiro elemento \n [D]- Mostrar quantos elementos o objeto existe \n [E]- Sair'))
 switch (choice) {
     case 'A': 
     qntd = Number(prompt('Quantos elementos a ser inserido'))
@@ -63,5 +73,13 @@ switch (choice) {
         break;
     case 'd': obj.size()
         break;
+    case 'e':
+        run = false;
+        break;
+    case 'E':
+        run = false;
+        break;
+    }
 }
+
 
