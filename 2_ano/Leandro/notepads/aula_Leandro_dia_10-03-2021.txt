@@ -1,0 +1,12 @@
+Estruturar um mapa mental dos processos do tic do 1 semestre (relacionar com os artefatos do que devem ser entregues em IHC1)
+{
+BRIEFING - Visão do produto, Alinhamento das especificações tecnicas entre designe e produto, cronograma de atividades
+5W1H (Produto)
+PERSONAS
+Suposição, Hipoteses, Validação 
+Benchamark
+}
+
+Utlizar o Trello para gerenciar o grupo
+
+Entregavel dos oobjetivos para a visão do produto

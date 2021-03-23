@@ -1,0 +1,17 @@
+Mapa Mental serve para organizar Ideias;
+
+NO CENTRO DO MAPA MENTAL - Se coloca relações com o projeto(nome), as ramificações é criada ramificações para ordem no time- Briefing(O que é), 
+5W1H  do produto, 
+Entendimento problema = Personas, Dores da persona;
+
+Mapa Mental Do projeto
+
+Publicar na Medium 
+
+Plano de Ação 5W1H do problema (entender o Produto){
+Why - Porque estou construindo este Produto]What - Proposito Do produto
+}
+
+Soluções nem sempre se tornam concretas, sempre se deve contextualizar
+
+Fazer Avaliação (How Measure) - Métricas de UX e negocios, google analitycs, é necessario medir comportamento do usuario para medir soluções

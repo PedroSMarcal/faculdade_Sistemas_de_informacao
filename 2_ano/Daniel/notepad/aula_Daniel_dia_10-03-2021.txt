@@ -1,0 +1,7 @@
+Se no lado diamante tivermos a cardinalidade n, é agregação (diamante não preenchido);
+
+Objeto todo ()
+definir um para muitos o que receber o diamante é o objeto todo, já o parte é a classe; 
+AGREGAÇÃO - é uma relação que um objeto é contido dentro do outro;
+COMPOSIÇÃO - é o mesmo conceito da agregação mas a associação é forte(no caso o objeto-parte e objeto-todo são dependentes)
+	Regra: Cardinalidade 1 do lado do diamante  
