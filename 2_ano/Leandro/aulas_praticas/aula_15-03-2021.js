@@ -25,25 +25,25 @@ function LinkedList(){
         length++
     }
 
-    this.insert = function(position, element){
-        if(position >= 0 && position <= length){
+    this.insert = function(position, element){ //passo a posição eo elemetno
+        if(position >= 0 && position <= length){ //checa se a posicao é valida
             var node = new Node(element),
             current = head,
             previous,
             index = 0
 
-            if (position === 0){
-                node.next = current
-                head = node
+            if (position === 0){ //checa se a posição é 0
+                node.next = current //inclui na cabeça
+                head = node // Deslocou a lista para direita e inseri um elemento na cabeça
             } else {
-                while(index++ < position){
+                while(index++ < position){ //anda dentro do elemento da lista até encontrar o elemento
                     previous = current
                     current = current.next
                 }
-                node.next = current
+                node.next = current //Inserção do elemento na lista
                 previous.next = node
             }
-            length++
+            length++ //Como ele inseriu ele incrementa o tamanho da lista encadeada
             return true
         } else {
             return false
@@ -51,21 +51,21 @@ function LinkedList(){
     }
 
     this.removeAt = function(position){
-        if(position > - 1 && position < length){
-            var current = head,
+        if(position > - 1 && position < length){ //Checa se a posição é valida
+            var current = head, //Declara uma variavel e dala que o no atual é cabeça
             previous,
             index = 0
 
             if (position === 0){
-                head = current.next
+                head = current.next // Cabeça recebe o elemento atual.next
             } else {
-                while(index++ < position){
-                    previous = current
+                while(index++ < position){ // Anda dentro do vetor até encontrar o elemento
+                    previous = current //Nó anterior recebe o nó corrente
                     current = current.next
                 }
                 previous.next = current.next
             }
-            length--
+            length-- //removeu um nó ele tem que decrescer tamanho do "vetor"
             return current.element
         } else {
             return null
@@ -73,27 +73,27 @@ function LinkedList(){
     }
 
     this.remove = function(element){ // Retira apenas 1
-        var index = this.indexOf(element)
-        console.log(index)
-        return this.removeAt(index)
+        var index = this.indexOf(element) //Precisa achar a posição do elemento a ser removido
+        console.log(index) //Declara o elemento inicial da busca como sendo a cabeça
+        return this.removeAt(index) //Declara o index como 0
     }
 
-    this.indexOf = function(element){
-        current = head
-        index = 0
+    this.indexOf = function(element){ //Busca onde o elemento está
+        current = head //Declara o elemento inicial da busca como sendo a cabeça
+        index = 0 // declara o index como 0
 
-        while(current){
-            if (element === current.element){
-                return index
+        while(current){ //enquanto nó atual...
+            if (element === current.element){ //elemento que é o cara que passei como parametro é igual ao elemetno atual
+                return index // Se for eu retorno o Index
             }
             index++
-            current = current.next
+            current = current.next //Anda para o proximo nó
         }
         return -1
     }
 
     this.isEmpty = function(){
-        return length === 0
+        return length === 0 //Verifica se o length ===0
     }
 
     this.size = function(){
@@ -101,7 +101,7 @@ function LinkedList(){
     }
 
     this.getHead = function(){
-        return head 
+        return head //retorna cabeça
     }
 
     this.toString = function(){

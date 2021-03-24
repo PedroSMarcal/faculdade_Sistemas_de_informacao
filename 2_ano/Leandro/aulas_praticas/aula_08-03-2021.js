@@ -3,7 +3,7 @@ function Hastable (){
 
     var ValuePair = function(key, value){
         this.key = key
-        this.value = value
+        this.value = value //Só pode receber receber 1 cara por vez -> [astolfo, Livia]
         this.toString = function(){
             return '[' + this.key + ' - ' + this.value + ']'
         }
