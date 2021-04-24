@@ -1,0 +1,19 @@
+Pré Condição - Precede e descreve que um estado deve ser verdadeiro, deve ser fazer o teste para o caso de uso;
+
+Documentar cada um dos processos;
+
+FLuxo Principal (Cenario Principal) - As passagens principais do usuario
+
+Fluxo Alternativo (Cenario Alternativo) - Onde a varias opções no gateways
+
+Pontos Fundamentais - Regras de Negocios
+
+Diagrama de caso de uso com a perspectiva do usuario, apresenta para a perspectiva do usuario;
+
+Descrição de varios atores, do projeto como um todo;
+
+Verbo Infinitivo;
+
+Nem tudo que é BPMN é sistema
+
+CASO E USO
