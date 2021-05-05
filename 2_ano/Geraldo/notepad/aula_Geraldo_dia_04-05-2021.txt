@@ -1,0 +1,62 @@
+1)
+V1 - (σ                                            CONTA)
+        ( (  Nome_Agencia = "SAL-1")           )
+
+ContaSelect1
+SAL-1	0001	1200
+SAL-1	0002	3000
+--------------------------------
+2)
+V1 - π Nome, saldo(AGENCIA)
+      
+Nome_Agencia		Saldo
+NOH-1			260050
+SAL-1			455580
+POA-1			1250369
+SAL-2			125588
+
+--------------------------------
+3) 
+V1 -(σ                            CONTA)
+      ( (  Nome_Agencia = "SAL-1")     )
+V2 - π nome, saldo(V1)
+
+Nome_Agencia	numero_conta	Saldo
+SAL-1		0001		1200
+SAL-1		0002		3000
+
+Nome_Agencia	Saldo
+SAL-1		1200
+SAL-1		3000
+---------------------------------
+4)
+V1 - π nome_Cliente (devedor)
+V2 - π nome_cliente(Depositante)
+V3 - V1 U V2
+
+nome_cliente
+João
+Ana
+--------------------------------
+5)
+V1 - π nome_Cliente (devedor)
+V2 - π nome_cliente(Depositante)
+V3 - V1 - V2
+
+Nome_Cliente
+Pedro		
+Francisco	
+Maria		
+Paulo		
+José		
+--------------------------------
+6) 
+V1 - π nome_Cliente(Depositante)
+V2 - π nome_Cliente(Devedor)
+V3 - V1 ∩ V2
+
+nome_Cliente
+João
+Ana
+ 
+       
