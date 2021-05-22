@@ -1,0 +1,113 @@
+```sql
+--CRIAR DATABASE
+CREATE DATABASE Exercicio09;
+
+-- CRIAR TABELA DEPARTAMENTOS COM CHAVE PRIMARIA NO COD_DEPTO
+CREATE TABLE tb_departamentos(
+cod_depto		CHAR(2),
+nm_depto		VARCHAR(60),
+CONSTRAINT pk_tb_departamentos_cod_depto PRIMARY KEY (cod_depto)
+);
+
+-- CRIAR TABELA FUNCIONARIOS COM CHAVE PRIMARIA NO COD_FUNCIONARIO E CHAVE ESTRANGEIRA REFERENCIANDO A TABELA DEPARTAMENTOS PELO COD_DEPTO
+CREATE TABLE tb_funcionarios(
+cod_funcionario 	CHAR(2),
+nome				VARCHAR(60),
+cod_depto			CHAR(2),
+salario				NUMERIC(7,2),
+CONSTRAINT pk_tb_funcionarios_cod_funcionario PRIMARY KEY (cod_funcionario),
+CONSTRAINT fk_tb_funcionarios_tb_departamentos_cod_depto FOREIGN KEY (cod_depto)
+	REFERENCES tb_departamentos(cod_depto)
+);
+
+-- INSERIR VALORES NA TABELA DEPARTAMENTOS
+INSERT INTO tb_departamentos VALUES 
+('D1', 'Contabilidade'),
+('D2', 'Administracao'),
+('D3', 'Informatica'),
+('D4', 'RH');
+
+-- MOSTRA VALORES TABELA DEPARTAMENTOS
+SELECT * FROM tb_departamentos;
+
+	-- INSERIR VALORES DENTRO DA TABELA FUNCIONARIO QUE ESTA REFERENCIADA DEPARTAMENTOS
+INSERT INTO tb_funcionarios VALUES 
+('E1', 'Jose', 'D1', 2500.00),
+('E2', 'Maria', 'D1', 2800.00),
+('E3', 'Jose', 'D2', 3200.00),
+('E4', 'Silvia', 'D3', 4650.00),
+('E5', 'Joao', 'D1', 2800.00);
+
+-- MOSTRA VALORES TABELA FUNCIONARIOS
+SELECT * FROM tb_funcionarios; 
+
+-- MOSTRAR NOMES FUNCIONARIOS INFERIOR A 2300
+SELECT nome FROM tb_funcionarios WHERE salario < 2600.00;
+
+-- MOSTRAR NOMES DEPARTAMENTOS COM FUNCIONARIOS GANHANDO ACIME DE 3500.00
+SELECT DISTINC (nm_depto) FROM tb_departamentos d 
+INNER JOIN tb_funcionarios f ON (d.cod_depto = f.cod_depto) 
+WHERE salario <= 3500.00;
+
+-- MOSTRAR OS NOMES DO FUNCIONARIOS QUE ESTÃO NO DEPTO ('D3')
+SELECT nome FROM tb_funcionarios WHERE cod_depto = 'D3';
+
+-- MOSTRAR NOME DOS EMPREGADOS DE CONTABILIDADE
+SELECT nome FROM tb_funcionarios f 
+INNER JOIN tb_departamento d 
+ON (d.cod_depto = d.cod_depto)
+WHERE nm_depto = 'Contabilidade';
+
+-- MOSTRAR SALARIO DOS EMPREGADOS DE CONTABILIDADE
+
+SELECT salario FROM tb_funcionarios f 
+INNER JOIN tb_departamento d 
+ON (d.cod_depto = d.cod_depto)
+WHERE nm_depto = 'Contabilidade';
+
+```
+
+R1 <-  **σ                 (tb_funcionarios)**
+
+R2 ←  **π nome (R1)**
+—-
+
+R1 ← tb_departamentos |X|                                                                                  tb_funcionarios
+
+                                      ()tb_departamentos.cod_depto = tb_funcionarios.cod_depto)
+
+R2 ← **σ                              (R1)**
+
+            (salario ≤ 3500.00 )
+
+R3 ← **π nm_depto (R2)**
+
+—-
+
+R1 ← **σ                           (tb_funcionarios)**
+
+           (cod_depto = 'D3')
+
+R2 ← **π nome (R1)**
+
+—-
+
+R1 ← tb_departamento |X|                                                                                      tb_funcionarios
+
+                                          (tb_departamentos.cod_depto = tb_funcionarios.cod_depto)
+R2 ← **σ                                             (R1)**
+
+           (nm_depto = 'Contabilidade')
+
+R3 ← **π nome (R2)**
+
+—-
+
+R1 ← tb_departamento |X|                                                                                      tb_funcionarios
+
+                                          (tb_departamentos.cod_depto = tb_funcionarios.cod_depto)
+R2 ← **σ                                             (R1)**
+
+           (nm_depto = 'Contabilidade')
+
+R3 ← **π salario(R2)**

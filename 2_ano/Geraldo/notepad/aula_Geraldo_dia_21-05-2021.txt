@@ -1,0 +1,4 @@
+A e D FN - DEPENDENCIA
+
+ItemVenda = Apresenta redundancia nos dados, sendo elas descricaoProd(CodigoTipoProd)
+
