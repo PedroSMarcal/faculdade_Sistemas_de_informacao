@@ -1,6 +1,10 @@
 //importar a dependencia express
 import express from 'express'
-import routes from './routes'
+import routes from './routes/routes'
+import "../typeorm"
+
+//importa conexão com BD
+
 
 //Criar servidor
 let servidor = express();
@@ -12,3 +16,7 @@ servidor.use(routes)
 servidor.listen(3333, () => {
     console.log('Server up runing ╰(*°▽°*)╯')
 })
+
+//COMANDOS DOCKER
+// docker ps (Ve maquinas ativas)
+// docker run --name postgres -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
