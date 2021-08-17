@@ -19,4 +19,4 @@ servidor.listen(3333, () => {
 
 //COMANDOS DOCKER
 // docker ps (Ve maquinas ativas)
-// docker run --name postgres -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
+// docker run --name postgres54321 -e POSTGRES_PASSWORD=docker -p 54321:5432 -d postgres

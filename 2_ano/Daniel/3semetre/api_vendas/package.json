@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/shared/http/server.ts"
+    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/shared/http/server.ts",
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
   },
   "keywords": [],
   "author": "Pedro Henrique Silva Marçal",
@@ -18,6 +19,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "pg": "^8.7.1",
-    "typeorm": "^0.2.36"
+    "typeorm": "^0.2.36",
+    "uuidv4": "^6.2.12"
   }
 }
