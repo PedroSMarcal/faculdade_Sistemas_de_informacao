@@ -32,7 +32,7 @@ export class CreateProducts1629160802039 implements MigrationInterface {
                     type: 'int'
                 },
                 {
-                    name: 'created_At',
+                    name: 'created_at',
                     type: 'timestamp with time zone',
                 },
                 {
@@ -44,6 +44,7 @@ export class CreateProducts1629160802039 implements MigrationInterface {
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
+        await queryRunner.dropTable('products')
     }
 
 }
