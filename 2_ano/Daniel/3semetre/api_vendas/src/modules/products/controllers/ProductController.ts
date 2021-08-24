@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
 import CreateProductService from "../services/CreateProductService";
-import Product from "../typeorm/entities/Products";
 
 export default class ProductController{
     // perceba que nesta classe não existe regra de negócio
