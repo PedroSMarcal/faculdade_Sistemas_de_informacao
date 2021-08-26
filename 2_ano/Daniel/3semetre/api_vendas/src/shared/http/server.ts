@@ -5,13 +5,12 @@ import "../typeorm"
 
 //importa conexão com BD
 
-
 //Criar servidor
 let servidor = express();
 
 // associa as rotas ao servidor 
+servidor.use(express.json())
 servidor.use(routes)
-
 //sobe o servidor, que fica escutando e aguardando requisições 
 servidor.listen(3333, () => {
     console.log('Server up runing ╰(*°▽°*)╯')

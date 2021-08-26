@@ -3,7 +3,7 @@ import CreateProductService from "../services/CreateProductService";
 import DeleteProductService from "../services/DeleteProductServices";
 import ListProductService from "../services/ListProductService";
 import ShowProductService from "../services/ShowProductService";
-import Product from "../typeorm/entities/Products";
+import UpdateProductService from "../services/UpdateProductService";
 
 export default class ProductController{
     // perceba que nesta classe não existe regra de negócio
@@ -18,7 +18,7 @@ export default class ProductController{
             name, 
             price, 
             quantity
-        })
+        });
 
         return response.json(newProduct) // Novo Produto Retornado
     }
@@ -46,5 +46,16 @@ export default class ProductController{
         let product = await showProduct.execute({id});
 
         return response.json(product);
+    }
+
+    public async update(request: Request,  response: Response): Promise<Response>{
+        let {id} = request.params
+        let {name, price, quantity} = request.body;
+
+
+        let updateService = new UpdateProductService();
+        let productUpdate = await updateService.execute({id, name, price, quantity})
+
+        return response.json(productUpdate)
     }
 }
