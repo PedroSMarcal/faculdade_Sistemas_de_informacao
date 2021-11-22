@@ -1,0 +1,45 @@
+Disciplina: Banco de Dados II (Exercício 07)  
+Uni-FACEF – Centro Universitário de Franca | Franca 
+Nome: Pedro Henrique Silva Marçal
+Código: 22646
+
+1-
+SELECT sobrenome, id_departamento, salario
+FROM tb_empregado
+WHERE (id_departamento, salario) = ANY (SELECT id_departamento, salario
+                                        FROM tb_empregado
+                                        WHERE percentual_comissao IS NOT NULL);
+
+2-
+SELECT e.sobrenome, d.nm_departamento, e.salario
+FROM tb_empregado e, tb_departamento d
+WHERE e.id_departamento = d.id_departamento
+AND (salario, NVL(percentual_comissao, 0)) IN (SELECT salario, NVL(percentual_comissao, 0)
+                                               FROM tb_empregado e, tb_departamento d
+                                               WHERE e.id_departamento = d.id_departamento
+                                               AND d.id_localizacao = 1700);
+
+3-
+SELECT sobrenome, salario
+FROM tb_empregado
+WHERE (salario, NVL(percentual_comissao,0)) = ALL (SELECT salario, NVL(percentual_comissao,0)
+                                                   FROM tb_empregado
+                                                   WHERE sobrenome = 'Kochhar')
+AND sobrenome != 'Kochhar'; 
+
+4-
+SELECT id_empregado, sobrenome, id_departamento
+FROM tb_empregado
+WHERE id_departamento IN (SELECT id_departamento
+                          FROM tb_departamento
+                          WHERE id_localizacao IN (SELECT id_localizacao
+                                                   FROM tb_localizacao
+                                                   WHERE cidade LIKE 'T%'));
+
+5-
+SELECT sobrenome, id_funcao, salario
+FROM tb_empregado
+WHERE salario > ALL (SELECT salario
+                     FROM tb_empregado
+                     WHERE id_funcao = 'SA_MAN')
+ORDER BY 3 DESC;

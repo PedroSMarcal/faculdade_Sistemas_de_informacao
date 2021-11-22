@@ -1,0 +1,56 @@
+Disciplina: Banco de Dados II (Exercício 08)  
+Uni-FACEF – Centro Universitário de Franca | Franca 
+Nome: Pedro Henrique Silva Marçal
+Código: 22646
+
+1-
+CREATE TABLE mulher (
+id_mulher		INTEGER,
+nome_mulher		VARCHAR2(15),
+CONSTRAINT pk_tb_mulher PRIMARY KEY(id_mulher)
+);
+
+CREATE TABLE homem (
+id_homem    INTEGER,
+nome_homem    VARCHAR2(15),
+id_mulher   INTEGER,
+CONSTRAINT pk_tb_homem PRIMARY KEY (id_homem),
+CONSTRAINT fk_tb_homem_tb_mulher FOREIGN KEY (id_mulher) REFERENCES mulher(id_mulher)
+);
+
+2- 
+INSERT INTO mulher VALUES(1, 'Edna');
+INSERT INTO mulher VALUES(2, 'Stefanny');
+INSERT INTO mulher VALUES(3, 'Cassia');
+
+INSERT INTO homem VALUES(10, 'Anderson', null);
+INSERT INTO homem VALUES(20, 'Jander', 1);
+INSERT INTO homem VALUES(30, 'Rogerio', 2);
+
+SELECT * FROM homem
+
+3-
+a) 
+SELECT h.nome_homem || ' Casado com a ' || m.nome_mulher as "Casamento" FROM homem h JOIN mulher m on h.id_mulher = m.id_mulher;
+
+b) 
+SELECT h.nome_homem || ' Casado com a ' || m.nome_mulher as "Casamento" FROM homem h NATURAL JOIN mulher m;
+
+c)
+SELECT h.nome_homem || ' Casado com a ' || m.nome_mulher as "Casamento" FROM homem h JOIN mulher m USING (id_mulher);
+
+d)
+SELECT h.nome_homem || ' Casado com a ' || m.nome_mulher as "Casamento" FROM homem h JOIN mulher m ON h.id_mulher = m.id_mulher;
+
+e)
+SELECT h.nome_homem || ' Casado com a ' || m.nome_mulher as "Casamento" FROM homem h CROSS JOIN mulher m;
+
+4-
+a)
+SELECT h.nome_homem as "Solteiro"
+FROM homem h LEFT OUTER JOIN mulher m ON (h.id_mulher = m.id_mulher) WHERE h.id_mulher is null;
+
+b)
+SELECT m.nome_mulher as "Solteiro"
+FROM homem h RIGHT OUTER JOIN mulher m ON (h.id_mulher = m.id_mulher) WHERE h.id_mulher is null;
+
