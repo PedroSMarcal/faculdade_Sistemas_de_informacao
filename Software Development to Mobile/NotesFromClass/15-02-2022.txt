@@ -1,0 +1,95 @@
+## Fluter - Google
+
+## React Native - Facebook
+
+Ambas gratuitas;
+
+React Native (utiliza a linguagem JS);
+
+JSX - Linguagem de Marcação de tags que se torna codigo JS
+
+Tem como programar direto por JS sem o JSX contudo é mais rapido e completo utilza
+
+Positioning = Flutter - “Beautiful native apps in record time”;
+
+                 React Native - “A framework for building native apps using React”
+
+OPEN SOURCE;
+
+Comunidade Expo (Classificar as melhores bibliotecas para React Native)
+
+[https://expo.dev/](https://expo.dev/)
+
+[https://snack.expo.dev/](https://snack.expo.dev/)
+
+### First React Native App
+
+```jsx
+import React, {Component} from 'react';
+import {Text, View} from 'react-native';
+
+export default class MeuApp extends Component{
+  render(){
+    return (
+      <View>
+        <Text> Hello World! </Text>
+      </View>
+    )
+  }
+}
+```
+
+```jsx
+import React, {Component} from 'react';
+import {Text, View, StyleSheet} from 'react-native';
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  f24:{
+    fontSize: 24
+  }
+})
+
+export default class MeuApp extends Component{
+  render(){
+    return (
+      <View style = {styles.container}>
+      <Text style={styles.f24}> Hello World! </Text>
+      </View>
+    )
+  }
+}
+```
+
+---
+
+```jsx
+import React, {Component} from 'react';
+import {Text, View, StyleSheet} from 'react-native';
+
+export default class MeuApp extends Component{
+  render(){
+    return (
+      <View style = {styles.container}>
+      <Text style={styles.f24}> Olá Mundo </Text>
+      <Text> lá Uni-FACEF </Text>
+      </View>
+    )
+  } 
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  f24:{
+    fontSize: 24
+  }
+})
+```

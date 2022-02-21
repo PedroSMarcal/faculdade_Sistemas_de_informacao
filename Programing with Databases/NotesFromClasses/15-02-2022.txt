@@ -1,0 +1,46 @@
+Auto-Junção
+
+Junção Interna
+
+- EQUI-JOIN
+- NÃO EQUI-JOIN
+
+Junção Externa (+)
+
+- Direita
+- Esquerda
+- Completa(Íntegral)
+
+```sql
+SELECT p.nm_produto, tp.nm_tipo_produto
+FROM tb_tipo_produto tp
+INNER JOIN tb_produto p ON (tp.id_tipo_produto = p.id_tipo_produto)
+WHERE p.id_produto = 3;
+```
+
+```sql
+SELECT p.nm_produto, tp.nm_tipo_produto 
+FROM tb_produtos p, tb_tipos_produtos tp
+WHERE p.id_tipo_produtos = tp.id_tipo_produto
+AND p.id_produto = 3;
+```
+
+Junção Externa → Usada para preservar tuplas de uma determinada tabela, selecionando um externa como  direita ou esquerda ou o total, sendo que isso ira trazer os dados preservados pelo lado decidido, para preservar da esquerda se coloca na direita;
+
+---
+
+### tb_empregado
+
+| id_empregado | nm_empregado | id_gerente |
+| --- | --- | --- |
+| 100 | rafael | null |
+| 110 | marina | 100 |
+| 120 | rogerio | 110 |
+| 130 | rose | 120 |
+- Elabore um Relatrio p/ exibir “o gerente de quem?”
+
+```sql
+SELECT g.nm_empregado || ' gerencia ' || e.nm_empregado
+FROM rb_empregado e
+INNER JOIN tb_empregado g ON (e.id_gerente = g.id_empregado)
+```

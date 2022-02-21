@@ -1,0 +1,49 @@
+```
+Rename the virtual Machine to Oracle_19c;
+Set the Ram Memory to the half
+Remote Screen enable Servidor
+Ethernet change to bridge name;
+
+When the Machine Starts:
+	Apllication Settings -> Region & Language
+```
+
+Abrir a IDEA SQL Developer
+
+```
+Clicar no + Verdinho (
+	New Connection (
+		Username = system
+		Password = oracle
+	)
+	Connection Type = TNS
+	Network Alias = ORCL
+)
+```
+
+Test
+
+```
+SELECT SYSDATE FROM dual;
+```
+
+COMANDO PARA FINALIZAR A MAQUINA 
+
+```
+shutdown -h now
+```
+
+COMANDO PARA CRIAR UM NOVO USUARIO
+
+```
+Por meio do DDL =
+CREATE USER plsql IDENTIFIED BY treina_plsql;
+```
+
+# DDL - CRIAR OBJETOS
+
+```
+ALTER USER plsql QUOTA 100M ON USERS;
+
+GRANT connect, resource TO plsql;
+```

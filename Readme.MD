@@ -1,12 +1,19 @@
-# Welcome to this Repo
+# Welcome to my third year;
 
-## the first thing you should know it's to navigate besides the branchs
+* Architecture and Organization from compoters - Carlos Eduardo de França Roland
+    - We learn about how it works a computer;
 
-* The Branch 1Ano - refers to my first year;
-* The Branch 2Ano - referes to my second year;
-* The Branch 3Ano - refers to my third year;
-* The Branch 4Ano - referes to my forth year;
+* Computer Network - Leandro Borges
+    - We learn about how it works the network - wifi and any kind of connection;
 
->I tried to save almost all the archives from the years;
+* Programing with Databases - Geraldo Henrique Neto
+    - Most essencialy we will learn PlSQL at the begining and evolve;
 
-## Please don't use the Repository to copy and paste projects;
+* Software Development to Mobile - Ely Fernando do Prado
+    - Here we learn how the mobile device works and how to create programs to it using [ReactNative](https://reactnative.dev/) and [Flutter](https://flutter.dev/)
+
+* Software Development to Web - Daniel Facciolo Pires
+    - We get more deep in web development using [NextJs](https://nextjs.org/), [Spring Boot](https://spring.io/projects/spring-boot)
+
+* Software Quality - Carlos Alberto Lucas
+    - 
