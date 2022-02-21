@@ -1,4 +1,0 @@
-https://github.com/arendst/tasmota/
-https://www.hackerearth.com/practice/algorithms/sorting/bubble-sort/tutorial/
-http://www.redbooks.ibm.com/
-burp
