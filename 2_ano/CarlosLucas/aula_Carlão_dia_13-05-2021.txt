@@ -1,8 +1,0 @@
-Quando o principal objetivo são items de configurações do software deste projeto atendendo a expectativa dos interessados, na matriz de rastriabilidade;
-
-Matriz inserção entre linhas e colunas;
-
-Requisito x Regra de Negocio;
-
-Matriz de Rastreabilidade;
-

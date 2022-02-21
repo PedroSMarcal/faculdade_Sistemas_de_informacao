@@ -1,7 +1,0 @@
-Objetivo - EAP (Identificar elementos terminais a serem feitos em um projeto);
-pequeno poremorganizado para medição do projeto;
-Fazer modelagem do EAP com coisas traçadas no projeto, seguir os diagramas anteriores, a estrutura analitica do projeto e captura todas as entregas enternas e externas, apresentar o 5w2h, definir o EAP para depois o TAP, walkthrght;
-decomposição dos nós apresentados logo o nó pai, criar um EAP, Apresentar-se com um projetista do projeto, temporização de entrega, e com ações executadas individualizadas por processos;
-(O que você verá e aplicara no 2°Ano podera contemplar um projeto com valor de 9);
-Granulidade (separação) de elementos e recursos, questões de representações de cursos reais, *se houver dentro da linha de qualidade mensurar em todos em sentidos*;
-EAP - Niveis baixo, medio, alto;
