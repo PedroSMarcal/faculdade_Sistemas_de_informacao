@@ -1,0 +1,5 @@
+O hash é apenas um valor que será alocado no local de uam tabela, ele retornara uma pair value, chave e valor sempre, dentro de uma tabela criada tudo tera a chave e o valor , cada um dos elementos para
+Porq  chave e valor, quando chamando pegara a chave, pega a chave e tal ira na poisção e atribuira com a chave, (chave Leandro), O proprio sistema seleciona as posições baseado na hashtable no ascii ("value".charCodeAt()) ;
+colisões serão tornadas em um algoritmo de hash
+a função get retornara o valor da table onde possui o local 5 com o valor no 5
+tabela [0 1 2 4 [leandro] 6 7 [astolfo]] 

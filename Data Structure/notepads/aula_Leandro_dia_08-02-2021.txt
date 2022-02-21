@@ -1,0 +1,24 @@
+Linguagens_Compilada - 
+
+Linguagens_MaquinaVirtual - Chama a maquina virtual Java 
+
+Linguagens_Interpretadas - A linguagem interpreta para 
+
+Cisc - Processador Cisc varias funções (instruções complexas)
+Risk - Processador Risk poucas funções (instruções reduzidas)
+
+Estruturas de dados e algoritmos com JavaScript
+
+Fila - primeiro que entra primeiro que sai
+
+Pilha - primeiro que entra ultimo que sai
+
+Hash - Algoritmo criptografico, saída alfanumerica menor que indica o conteudo, (operação matematica)
+----------------------------------------
+Tel Leandro (999972-2323)
+
+Rainbow table (hash reverso)
+MD%
+MD5
+SHA
+LM

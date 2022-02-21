@@ -1,0 +1,60 @@
+paradigma - modelo, padrão, maneira
+
+exemplos de paradigma - Programação Funcional, Orientado a Objetos, Procedural, Lógico, orientados a eventos, componentes;
+
+Procedural, Funcional, Orientada a objetos (JS);
+
+JAVA - Essencialmente Orientado a Objeto
+
+classe (.JAVA)
+
+public class nome_classe {
+}
+
+PlanoDeEnsino, PortalWeb, Conceito de O.O. classes, Objetos, Instancias, Encapsulamento, Agregação, Composição, Herança, Polimorfismo, Anulação de Metódos, Classes Abstradas, Classes Interfaces;
+2° Bimestre - SpringBoot
+
+Bibliografia 
+Livro: DEITEL, Java Como Programar.
+YouTube . Orientação a Objetos com Java - Gustavo Guanabara
+
+
+Software de desenvolvimento
+
+ORACLE - DIREITOS DA JAVA
+
+JSE - JAVA STANDART EDITION OU JTK - JAVA DEVELOPMENT KIT
+
+IDE - INTEGRATE 
+--------------------
+CMD - java - version
+--------------------
+
+Classe, abstrato, modelo
+
+Objeto, concreto, exemplo
+
+Time de futebol ->
+Palmeiras, Timão, São Paulo, Santos
+
+classe: carro
+variaveis:
+-marca
+-modelo
+-ano
+-combustivel
+-motor
+-/-/-/-/-/-/
+Objetos: obj1
+marca: chevrolet
+modelo: onix lt
+ano: 2018
+combustivel: flex
+motor: 1.0
+
+objeto: obj2
+marca: fiat
+modelo: palio
+ano: 2020
+combustivel: flex
+motor: 1.6

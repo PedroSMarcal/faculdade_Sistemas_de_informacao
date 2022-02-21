@@ -1,0 +1,24 @@
+Disciplina: Banco de Dados II (Exercício 05)
+Uni-FACEF – Centro Universitário de Franca | Franca
+Nome: Pedro Henrique Silva Marçal
+Código: 22646
+
+01 - SELECT 'O identificador da ' || ds_funcao || ' é o ID: ' || id_funcao as "DEscrição da Função" FROM tb_funcao;
+
+02 - SELECT (22 / 7) * (6000 * 6000) from dual;
+
+03 - SELECT nm_departamento from tb_departamento where nm_departamento like ('%ing');
+
+04 - SELECT ds_funcao, id_funcao, (teto_salario - base_salario) as "Diferença" from tb_funcao where ds_funcao like '%Gerente%' or ds_funcao like '%Presidente%';
+
+05 - 
+SELECT id_empregado, nome, salario, salario*12 as "salario_anual", (&aliquota * (salario*12)) as "aliquota_anual" from tb_empregado;
+
+
+OU 
+
+define &&aliquota;
+
+SELECT id_empregado, nome, salario, salario*12 as "salario_anual", &&aliquota as "aliquota", (&&aliquota * (salario*12)) as "aliquota_anual" from tb_empregado;
+
+undefine aliquota;

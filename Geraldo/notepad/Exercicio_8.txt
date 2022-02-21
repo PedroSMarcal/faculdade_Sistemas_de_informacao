@@ -1,0 +1,93 @@
+## AULA DIA 27/04/2021
+
+1.  R1 ← (σ                                                             ( tb_Departamentos ))
+          (   (              cod_departamento               )                                 )
+
+R2 ← (σ                                                               (    tb_Funcionario   ))
+         (    (       cod_departamento = (R1)           )                                  )
+
+R3 ←  π nome, sobrenome, endereço (R2)
+
+    ---
+
+    R1 ←  ( tb_Departamentos ) |X|                                                                  (    tb_Funcionario   )
+                           (tb_Departametnos.cod_departamento) = (tb_Funcionario.cod_departamento))
+
+    R2 ← σ                                                                                                         (  R1 )
+                (  nome = "Pesquisa" )
+
+    R3 ←  π nome, sobrenome, endereco ( R2 )
+
+    RESP:  
+            R1 ← Selecione                                                                        ( Departamento )
+                                     ( nome = "Pesquisa" )
+
+            R2 ← R1 |X|                                                                                           Funcinario
+                              (R1.cod_departamento = Funcionario.cod_departamento)
+
+            R3 ← Projete Funcionario.nome, sobrenome, endereco ( R2 )
+
+    ---
+
+2.  R1 ← (σ                                                            ( Projeto ))
+          (   (         localizacao   = "Maua"             )                     ) 
+
+R2 ← ( Projeto |X|                                                              (Departamento ) )
+         (    (         R1.cod_departamento  =  Departamento.cod_departamento   )
+
+R3 → (σ                                                                                             tb_Funcionario )
+         (  ( R2.cpf_Gerente = Funcionario.cpF_Gerente ) )
+
+R3 ← π cod_departamento, cod_projeto, sobrenome, endereco, dt_nascimento(R3)
+
+    ---
+
+3.  R1 ← π cod_departamento (σ                                                        Projeto)
+                                            (  ( cod_departamento = 5)                            )
+
+    R2 ← π CPF, cod_projeto (Trabalha_em)
+         
+    R3 ← R2 **÷** R1
+
+    R4 ←   π Funcionario.nome, Sobrenome (R3 |X|                                                     Funcionario)
+
+                                                                        (R3.CPF = Funcionario.CPF)
+
+---
+
+4. R1 ← **π CPF (Funcionario)**
+
+    R2 ← **π CPF_func (Dependente)**
+
+    R3 ← (Funcionario.cpf - Dependente.cpf)
+    R4 ← R3 |X|                                                    Funcionario
+                       (R3.CPF_Func = Funcionario.CPF)
+
+    R4 ← **π**  Funcionario.Nome, Sobrenome ( R3 )
+
+---
+
+5. R1 ← **π**  CPF_Gerente (Departamento)
+
+    R2 ← **π**  CPF_Func (Dependente)
+
+    R3 ← R1 **∩** R2
+
+    R4 ← R3 |X|                                                   Funcionario  
+                      (R3.CPF_Func = Funcionario.CPF)
+    R5 ← **π**  Nome, Sobrenome (R4)
+
+---
+
+6. R1 ← **σ                                                                     (Funcionario)
+               (cod_departamento = 4 E salario > 25.000)**
+
+    R2 ← **σ                                                                      (R1)
+               ( cod_departamento = 5 E salario > 30.000)**
+    
+
+---
+
+7. R1 ← (**σ                                      (Funcionarios))
+             (  ( cod_departameno = 5)                         )
+   R2 ← π**  nome, sobrenome, salario(R1)

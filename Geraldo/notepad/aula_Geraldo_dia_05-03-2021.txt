@@ -1,0 +1,22 @@
+CREATE DATABASE "UNIFACEF _BD1"
+TEMPLATE = template0 
+ENCODING 'UTF-8'
+CONNECTION LIMIT 100;
+
+--Cria um database 
+
+/*/*/*/*/*/*//*/*/*/*/*/*/
+
+CREATE TABLE tb_departamento(
+cod_departamento	INTEGER, 
+nm_departamento		VARCHAR(40),
+CONSTRAINT pk_tb_depto_cod_depto PRIMARY KEY(cod_departamento)
+);
+
+SELECT *
+FROM tb_departamento;
+
+--Comentarios em SQL
+/* Comentário em Blocos */
+--CONSTRAINT (Restrição)
+/*Caso você utilize CONSTRAINT se ira criar uma chave primaria ou estrangeira com o nome do elemento exato que ira receber;*/

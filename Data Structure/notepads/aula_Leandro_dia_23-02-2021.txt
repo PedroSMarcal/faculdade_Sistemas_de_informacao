@@ -1,0 +1,19 @@
+Arquitetura de computadores - decada de 60, Jhon folmichael (primeira ideia do Computador), processamento, memoria Volatil, Memoria Persistente;
+
+Sistema operacional, faz controles de Acesso dos componentes de Hardware (sem ele seria unitarefa);
+
+Arquitetura x86 = copia um codigo executavel e aloca em um espaço de memoria;
+
+Memoria Reservada = O app guarda um espaço na memoria para se usar
+
+SWAP - memoria insuficiente, ou não se utilizar se joga no disco;
+
+Trabalhar com a memoria, a referencia ao objeto serve como um ponteiro;
+
+Codigos 'JS é uma zoeira', 'Um é javascript vc declara uma coisa e aquela coisa pode ser qualquer coisa', 
+
+Dois tipos de estrutura de dados:
+	Primitivas - int, float, varchar;
+	Cadeia de estrutura de dados primitivos - Estruturas Primarias;
+
+JS sem tipagem de variaveis - class, function;

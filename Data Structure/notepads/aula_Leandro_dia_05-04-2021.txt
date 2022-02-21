@@ -1,0 +1,9 @@
+Estruturas de dados Primarias - var int, varchar, varplop; e como juntando estruturas primarias se torna vetores e matrizes 
+
+Fila e Pilha (Fifo - First In first Out), (Lifo - Last in First out);
+
+Comportamento da Lista Encadeada dentro da memoria e diferencia para uma fila
+
+Garbage Colector (explicar linguagens interpretadas e não interpretadas como manipulam dados na memoria)
+
+Hash (Algoritmo)

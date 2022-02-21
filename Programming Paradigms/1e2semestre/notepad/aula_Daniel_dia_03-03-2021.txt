@@ -1,0 +1,28 @@
+Encapsular significa protejer, esconder, não permitir mal uso, previnir;
+
+Public tipo_variavel nome_variavel;
+Private tipo_variavel nome_variavel;
+ _______________
+| + Public	|
+|---------------|
+| - Private	|
+|_______________|
+
+Para todas as variaveis que eu crio tenho que atribuir getters e setters, 
+tipo Variavel:
+
+void setVariavel(tipo){
+
+}
+
+tipo getVariavel (){
+
+} 
+
+Hierarquia, uma classe pai gera duas classes filhos, e ai a herança dos metodos porém os filhos não podem alterar os dados do pai;
+para isso quando instanciamos o objeto com o final e assim o elemento não consegue acesso:
+public final void var(){}
+o filho não altera os metodos herdados do pai;
+
+ACESSAR A VAR - GET
+ALTERAR A VAR - SET
